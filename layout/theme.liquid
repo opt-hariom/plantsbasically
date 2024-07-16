@@ -1,0 +1,459 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="{{ settings.color_button }}">
+  <link rel="canonical" href="{{ canonical_url }}">
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+  <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com">
+  <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.googleapis.com">
+  <link rel="dns-prefetch" href="https://maps.gstatic.com">
+  
+
+<!-- Hotjar Tracking Code for https://www.plantsbasically.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3625627,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+        
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+  
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var buttons = document.querySelectorAll('.variant-btn');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var variantId = this.getAttribute('data-variant-id');
+            var selectDropdown = document.querySelector('.product-single__variants');
+            selectDropdown.value = variantId;
+            selectDropdown.dispatchEvent(new Event('change')); // Trigger the change event to update variant images, price, etc.
+        });
+    });
+});
+</script>
+
+
+  <!-- SCRIPT FOR DISCOUNT APPLIED AT CHECKOUT -->
+
+  <script type="text/javascript">
+   document.addEventListener('DOMContentLoaded', function() {
+  var urlParams = new URLSearchParams(window.location.search);
+  var discountCode = urlParams.get('discount'); // Assuming 'discount' is your URL parameter
+  if(discountCode) {
+    var message = 'Discount code ' + discountCode + ' applied!';
+    
+    // Create the notification bar
+    var notificationBar = document.createElement('div');
+    notificationBar.style.padding = '10px';
+    notificationBar.style.backgroundColor = '#d2b360';
+    notificationBar.style.color = 'white';
+    notificationBar.style.textAlign = 'center';
+    notificationBar.style.fontSize = '13px';
+    notificationBar.style.fontWeight = 'bold';
+    notificationBar.style.position = 'relative'; // For positioning the close button
+    
+    // Create the close button
+    var closeButton = document.createElement('button');
+    closeButton.innerText = 'x';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '0';
+    closeButton.style.right = '10px';
+    closeButton.style.border = 'none';
+    closeButton.style.background = 'transparent';
+    closeButton.style.color = 'white';
+    closeButton.style.fontSize = '20px';
+    closeButton.style.cursor = 'pointer';
+    
+    // Append the close button to the notification bar
+    notificationBar.appendChild(closeButton);
+    
+    // Append the message to the notification bar
+    var textSpan = document.createElement('span');
+    textSpan.innerText = message;
+    notificationBar.appendChild(textSpan);
+    
+    // Add click event listener to the close button
+    closeButton.addEventListener('click', function() {
+      notificationBar.style.display = 'none'; // Hide the notification bar when the button is clicked
+    });
+
+    // Prepend the notification bar to the body
+    document.body.prepend(notificationBar);
+  }
+});
+  </script>
+
+
+  
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MC2M2PBF');</script>
+<!-- End Google Tag Manager -->
+
+  
+ 
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
+  {%- endif -%}
+
+  {%- render 'seo-title' -%}
+
+  {%- if page_description -%}
+  <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+  
+  {%- render 'social-meta-tags' -%}
+
+  {%- render 'font-face' -%}
+  {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  {%- render 'css-variables' -%}
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    window.theme = window.theme || {};
+    theme.routes = {
+      home: "{{ routes.root_url }}",
+      cart: "{{ routes.cart_url | append: '.js' }}",
+      cartPage: "{{ routes.cart_url }}",
+      cartAdd: "{{ routes.cart_add_url | append: '.js' }}",
+      cartChange: "{{ routes.cart_change_url | append: '.js' }}",
+      search: "{{ routes.search_url }}",
+      predictiveSearch: "{{ routes.predictive_search_url }}"
+    };
+    theme.strings = {
+      soldOut: {{ 'products.product.sold_out' | t | json }},
+      unavailable: {{ 'products.product.unavailable' | t | json }},
+      inStockLabel: {{ 'products.product.in_stock_label' | t | json }},
+      oneStockLabel: {{ 'products.product.stock_label.one' | t: count: '[count]' | json }},
+      otherStockLabel: {{ 'products.product.stock_label.other' | t: count: '[count]' | json }},
+      willNotShipUntil: {{ 'products.product.will_not_ship_until' | t: date: '[date]' | json }},
+      willBeInStockAfter: {{ 'products.product.will_be_in_stock_after' | t: date: '[date]' | json }},
+      waitingForStock: {{ 'products.product.waiting_for_stock' | t | json }},
+      savePrice: {{ 'products.general.save_html' | t: saved_amount: '[saved_amount]' | json }},
+      cartEmpty: {{ 'cart.general.empty' | t | json }},
+      cartTermsConfirmation: {{ 'cart.general.terms_confirm' | t | json }},
+      searchCollections: {{ 'general.search.collections' | t | json }},
+      searchPages: {{ 'general.search.pages' | t | json }},
+      searchArticles: {{ 'general.search.articles' | t | json }},
+      productFrom: {{ 'products.general.from_text_html' | t: price: '' | json }},
+      maxQuantity: {{ 'cart.general.max_quantity' | t: quantity: '[quantity]', title: '[title]' | json }}
+    };
+    theme.settings = {
+      cartType: {{ settings.cart_type | json }},
+      isCustomerTemplate: {% if request.page_type contains 'customers/' %}true{% else %}false{% endif %},
+      moneyFormat: {{ shop.money_format | json }},
+      saveType: {{ settings.product_save_type | json }},
+      productImageSize: {{ settings.product_grid_image_size | json }},
+      productImageCover: {{ settings.product_grid_image_fill }},
+      predictiveSearch: {{ settings.predictive_search_enabled }},
+      predictiveSearchType: {{ settings.search_type | json }},
+      predictiveSearchVendor: {{ settings.predictive_search_show_vendor | json }},
+      predictiveSearchPrice: {{ settings.predictive_search_show_price | json }},
+      quickView: {{ settings.quick_shop_enable }},
+      themeName: 'Impulse',
+      themeVersion: "7.3.4"
+    };
+  </script>
+
+  {%- render 'header-scripts.zipifypages', renderctx: 'thm' -%}{{ content_for_header }}
+
+  <script src="{{ 'vendor-scripts-v11.js' | asset_url | split: '?' | first }}" defer="defer"></script>
+
+  {%- if shop.enabled_currencies.size > 1 -%}
+    <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
+  {%- endif -%}
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
+
+  {% if request.design_mode %}
+    <script src="https://api.archetypethemes.co/design-mode.js" defer="defer"></script>
+  {% endif %}
+
+	{{ shop.metafields.loox["global_html_head"] }}
+</head>
+
+<body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-center-text="{{ settings.type_body_align_text }}" data-button_style="{{ settings.button_style }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-type_headers_align_text="{{ settings.type_headers_align_text }}" data-type_product_capitalize="{{ settings.type_product_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" {% if settings.disable_animations %}data-disable-animations="true"{% endif %}>
+
+  <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+  <div id="PageContainer" class="page-container">
+    <div class="transition-body">
+
+    {%- sections 'header-group' -%}
+    {%- sections 'popup-group' -%}
+
+      <main class="main-content" id="MainContent">
+        {{ content_for_layout }}
+      </main>
+
+    {%- sections 'footer-group' -%}
+
+    </div>
+  </div>
+
+  {%- liquid
+    render 'video-modal'
+    render 'photoswipe-template'
+    render 'tool-tip'
+  -%}
+
+  {% comment %} Image markup used when building product grid item via JS {% endcomment %}
+  <template id="naturalImageMarkup">
+    <div class="image-wrap" style="height: 0;">
+      <image-element data-aos="image-fade-in">
+        <img class="grid-product__image" width height src srcset loading="lazy" alt>
+      </image-element>
+    </div>
+  </template>
+  <template id="fixedRatioImageMarkup">
+    <div class="grid__image-ratio">
+      <image-element data-aos="image-fade-in">
+        <img width height src srcset loading="lazy" alt>
+      </image-element>
+    </div>
+  </template>
+
+	{{ shop.metafields.loox["global_html_body"] }}
+
+
+
+  
+{%- render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp -%}
+<!-- PF EDT START -->
+<script type='text/javascript'>
+{%- if content_for_header contains 'shopify-product-customizer' -%}
+    {%- if product -%}
+        {%- if product.first_available_variant -%}
+            var pfSyncProductIdentity = {{ product.id | json}};
+            var pfProductId = {{ product.metafields.printful.is_synced | json }};
+            var pfEdt = {{ shop.metafields.printful.is_edt_enabled | json }};
+            var pfEdtTextColor = {{ shop.metafields.printful.edt_text_color | json }};
+            var pfEdtBackgroundColor = {{ shop.metafields.printful.edt_background_color | json }};
+            var pfEdtBorderColor = {{ shop.metafields.printful.edt_border_color | json }};  
+            var pfEdtUseDefaultStyling = {{ shop.metafields.printful.edt_default_style | json }};
+            var pfEdtTextAlignment = {{ shop.metafields.printful.edt_text_alignment | json }};
+            var pfEdtFlags = {
+                US: "{{ 'US.svg' | asset_url }}",CA: "{{ 'CA.svg' | asset_url }}",ES: "{{ 'ES.svg' | asset_url }}",LV: "{{ 'LV.svg' | asset_url }}",GB: "{{ 'GB.svg' | asset_url }}",DE: "{{ 'DE.svg' | asset_url }}",FR: "{{ 'FR.svg' | asset_url }}",AU: "{{ 'AU.svg' | asset_url }}",JP: "{{ 'JP.svg' | asset_url }}",NZ: "{{ 'NZ.svg' | asset_url }}",IT: "{{ 'IT.svg' | asset_url }}",BR: "{{ 'BR.svg' | asset_url }}",KR: "{{ 'KR.svg' | asset_url }}",NL: "{{ 'NL.svg' | asset_url }}",GB: "{{ 'GB.svg' | asset_url }}",US: "{{ 'US.svg' | asset_url }}",
+            };
+        {%- else -%}
+            var pfEdt = 0;
+        {%- endif -%}
+    {%- endif -%}
+{%- endif -%}
+</script>
+  
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MC2M2PBF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->  
+
+  
+<!-- PF EDT END -->
+
+  <script>
+var initGorgiasChatPromise = (window.GorgiasChat) ? window.GorgiasChat.init() : new Promise(function (resolve) { window.addEventListener('gorgias-widget-loaded', function () { resolve();})});
+
+initGorgiasChatPromise.then(async () => {
+  GorgiasChat.hidePoweredBy(true)
+})
+</script>
+
+  {% if customer %}
+  {% for tag in customer.tags %}
+    {% if tag == "rc-member-bronze-active" %}
+      <script>
+        let cookie_split = document.cookie.split(';');
+        let discount_cookie = false;
+        for (let k = 0; k < cookie_split.length; k++) {
+            if (cookie_split[k].includes("discount_code=REWARD-MEMBER-FREE-SHIPPING")) { //Check if discount code is already applied
+                discount_cookie = true;
+            }
+        }
+        if (!discount_cookie) {
+            fetch('/discount/REWARD-MEMBER-FREE-SHIPPING')//Apply discount code
+            .then(function () {
+                // After the discount code has been applied, force the cart to update so the discount is visible instantly
+                return fetch('/cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        updates: {},
+                    }),
+                });
+            })
+            .catch(function (error) {
+               console.error('Error:', error);
+            });
+        }
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+   {% if customer %}
+  {% for tag in customer.tags %}
+    {% if tag == "rc-member-silver-active" %}
+      <script>
+        let cookie_split = document.cookie.split(';');
+        let discount_cookie = false;
+        for (let k = 0; k < cookie_split.length; k++) {
+            if (cookie_split[k].includes("discount_code=REWARD-MEMBER-FREE-SHIPPING")) { //Check if discount code is already applied
+                discount_cookie = true;
+            }
+        }
+        if (!discount_cookie) {
+            fetch('/discount/REWARD-MEMBER-FREE-SHIPPING')//Apply discount code
+            .then(function () {
+                // After the discount code has been applied, force the cart to update so the discount is visible instantly
+                return fetch('/cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        updates: {},
+                    }),
+                });
+            })
+            .catch(function (error) {
+               console.error('Error:', error);
+            });
+        }
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+  
+
+     {% if customer %}
+  {% for tag in customer.tags %}
+    {% if tag == "rc-member-gold-active" %}
+      <script>
+        let cookie_split = document.cookie.split(';');
+        let discount_cookie = false;
+        for (let k = 0; k < cookie_split.length; k++) {
+            if (cookie_split[k].includes("discount_code=REWARD-MEMBER-FREE-SHIPPING")) { //Check if discount code is already applied
+                discount_cookie = true;
+            }
+        }
+        if (!discount_cookie) {
+            fetch('/discount/REWARD-MEMBER-FREE-SHIPPING')//Apply discount code
+            .then(function () {
+                // After the discount code has been applied, force the cart to update so the discount is visible instantly
+                return fetch('/cart/update.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        updates: {},
+                    }),
+                });
+            })
+            .catch(function (error) {
+               console.error('Error:', error);
+            });
+        }
+      </script>
+    {% endif %}
+  {% endfor %}
+{% endif %}
+  
+{% if product %}
+<script type="text/javascript">
+  window.addEventListener("load", function() {
+    var _learnq = window._learnq || [];
+  function addedToCart() {
+  fetch(`${window.location.origin}/cart.js`)
+  .then(res => res.clone().json().then(data => {
+    var cart = {
+      total_price: data.total_price/100,
+      $value: data.total_price/100,
+      total_discount: data.total_discount,
+      original_total_price: data.original_total_price/100,
+      items: data.items
+    }
+    if (item !== 'undefined') {
+      cart = Object.assign(cart, item)
+    }
+    _learnq.push(['track', 'Added to Cart', cart])
+  }))
+} 
+(function (ns, fetch) {
+  ns.fetch = function() {
+    const response = fetch.apply(this, arguments);
+    response.then(res => {
+      if (`${window.location.origin}/cart/add.js?upcart=1&opens_cart=maybe`
+        .includes(res.url) || `${window.location.origin}/cart/add.js`
+        .includes(res.url)) {
+          addedToCart()
+      }
+    });
+    return response
+  }
+}(window, window.fetch))
+$(document).ajaxComplete(function(event, request, settings){
+  if(settings.url == "/cart/add.js?upcart=1&opens_cart=maybe" || settings.url == "/cart/add.js"){
+      addedToCart()
+  }
+})
+  })
+  
+
+
+</script>
+{% endif %}
+  
+  
+</body>
+</html>

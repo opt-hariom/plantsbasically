@@ -1,0 +1,78 @@
+<!-- subscription-widget.liquid -->
+<div id="subscription-widget">
+  <div class="subscription-options">
+    <label>
+      <input type="radio" name="purchase_type" value="one_time" checked>
+      One-Time Purchase <span class="price">${{ product.price | money }}</span>
+    </label>
+    <label>
+      <input type="radio" name="purchase_type" value="subscription">
+      Membership • Save 20% <span class="price">${{ product.price | times: 0.8 | money }}</span>
+    </label>
+  </div>
+
+  <div class="frequency-selector">
+    <label>CHOOSE FREQUENCY</label>
+    {% for interval in product.metafields.recharge.intervals %}
+      <button class="frequency {{ interval.default ? 'popular' : '' }}" data-frequency="{{ interval.value }}">
+        {{ interval.value }} Days
+      </button>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+
+#subscription-widget {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.subscription-options label {
+  display: block;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.frequency-selector label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+.frequency {
+  padding: 10px;
+  margin-right: 5px;
+  background-color: #ccc;
+  border: none;
+  cursor: pointer;
+}
+.frequency.popular {
+  background-color: #8fbc8f;
+}
+  
+</style>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var purchaseTypeInputs = document.querySelectorAll('input[name="purchase_type"]');
+  var frequencyButtons = document.querySelectorAll('.frequency');
+
+  purchaseTypeInputs.forEach(input => {
+    input.addEventListener('change', function() {
+      updatePriceDisplay(this.value);
+    });
+  });
+
+  function updatePriceDisplay(type) {
+    // Logic to update price display based on selection
+  }
+
+  frequencyButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      frequencyButtons.forEach(btn => btn.classList.remove('popular'));
+      this.classList.add('popular');
+    });
+  });
+});
+  
+</script>

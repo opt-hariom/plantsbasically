@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Goudy Old Style";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("//www.plantsbasically.com/cdn/fonts/goudy_old_style/goudyoldstyle_n7.0b4e05a272b52ed3a571eb1307aee1c6d2f9cd5e.woff2?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=762c8691c3f5f4c7d19deaafe2313952126d252d7ee9108c2dc971a6d7413b93") format("woff2"),
+       url("//www.plantsbasically.com/cdn/fonts/goudy_old_style/goudyoldstyle_n7.ee71d477c716d1113e87192e7aa3253593ee66be.woff?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=21d89f384f9e1368dcdb36209361eadd92bb4507d3fce6a87308fb611e27c6af") format("woff");
+}
+
+  @font-face {
+  font-family: Lato;
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("//www.plantsbasically.com/cdn/fonts/lato/lato_n5.10bc1bd2bdb4c0ac35363745e79901b69a0be29a.woff2?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=1904fba73feae90bfd7f9e58fb5d07537053b1223465a0c1207c7cc524e43c82") format("woff2"),
+       url("//www.plantsbasically.com/cdn/fonts/lato/lato_n5.f7f0195bc06ce869daac4bf73d242fb9b37734db.woff?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=70b2e2165daf4486bb850fa2fd2d331ca643d23f84bbaca6150645942ab64c25") format("woff");
+}
+
+
+  @font-face {
+  font-family: Lato;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url("//www.plantsbasically.com/cdn/fonts/lato/lato_n6.8f129fde40f203553b1c63523c8c34e59550404e.woff2?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=b63bff55cdf2bfa69bb05d7085e30f01b7b63fc104c4c773f0a7fe85502b5b26") format("woff2"),
+       url("//www.plantsbasically.com/cdn/fonts/lato/lato_n6.822b168fbb902b52be8d60ec7a9fd5122a4894fe.woff?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=6c82c8ac080f04baac0443ca6de20b8f8982010f00509679769089d901e0bd6f") format("woff");
+}
+
+  @font-face {
+  font-family: Lato;
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url("//www.plantsbasically.com/cdn/fonts/lato/lato_i5.34a1281e461a2dbf339c6340939aff4fa5a02ce4.woff2?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=548507e59e8468a9aa0026a11888f9417f9224bee6c45d896b45d1a57d6ebf79") format("woff2"),
+       url("//www.plantsbasically.com/cdn/fonts/lato/lato_i5.dfa979b4c6c5c096432f0742c70ca73f045a9465.woff?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=a50f0d42635dcb6e3e1a9d687c733fe9585e2ac56c7184d7d671a6251d24f2dc") format("woff");
+}
+
+  @font-face {
+  font-family: Lato;
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+  src: url("//www.plantsbasically.com/cdn/fonts/lato/lato_i6.2272604446e44eb1fbbcde161e64c61fa5eb51aa.woff2?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=02512a77b5f74675d9fbb77eee2359ddcb70bd2d81b0ca5d120bd6044a1946fd") format("woff2"),
+       url("//www.plantsbasically.com/cdn/fonts/lato/lato_i6.113c79ebd8ad85acba346c87b546aece226b6bd6.woff?h1=cGxhbnRzYmFzaWNhbGx5LmNvbQ&h2=cGxhbnRzYmFzaWNhbGx5LmFjY291bnQubXlzaG9waWZ5LmNvbQ&h3=YWNjb3VudC5wbGFudHNiYXNpY2FsbHkuY29t&hmac=d15308279a432c0a3a5801a8ffaff1b6af03ebafe7ac45b3cd09617ae96d2574") format("woff");
+}

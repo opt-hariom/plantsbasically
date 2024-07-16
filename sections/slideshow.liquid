@@ -181,7 +181,7 @@
                       {% assign desktop_classes = 'hero__image hero__image--' | append: block.id %}
                     {% endif %}
 
-                    {%- render 'image-element',
+                    {%- render 'image-element-slide',
                       img: block.settings.image,
                       img_width: 2400,
                       loading: loading,
@@ -191,7 +191,7 @@
                     {%- if has_mobile_image -%}
                       {% assign mobile_classes = 'medium-up--hide hero__image hero__image--' | append: block.id %}
 
-                      {%- render 'image-element',
+                      {%- render 'image-element-slide',
                         img: block.settings.image_mobile,
                         img_height: 1200,
                         loading: loading,
@@ -202,7 +202,7 @@
                   {%- else -%}
                     {%- if template == 'password' -%}
                       {%- assign password_image = 'password-page-background.jpg' -%}
-                      {%- render 'image-element',
+                      {%- render 'image-element-slide',
                         asset: password_image,
                         loading: section.settings.lazyload_images,
                         host: 'theme',

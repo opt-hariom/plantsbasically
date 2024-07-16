@@ -1,6 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}" dir="{{ settings.text_direction }}">
 <head>
+  {% render 'appco-header' %}
+  {% render 'font-css' %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -15,7 +17,7 @@
   
 
 <!-- Hotjar Tracking Code for https://www.plantsbasically.com/ -->
-<script>
+<script type="lazyload_js">
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:3625627,hjsv:6};
@@ -118,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<script type="lazyload_js">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
@@ -137,14 +139,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta name="description" content="{{ page_description | escape }}">
   {%- endif -%}
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" data-href="https://fonts.googleapis.com">
+  <link rel="stylesheet" data-href="https://fonts.gstatic.com">
+  <link data-href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap" rel="stylesheet">
   
   {%- render 'social-meta-tags' -%}
 
+  <link data-href="{{ 'fonts.css' | asset_url }}" rel="stylesheet">
+  {% comment %}
   {%- render 'font-face' -%}
-  {{ 'theme.css' | asset_url | stylesheet_tag: preload: true }}
+  {% endcomment %}
+  
+  <link rel="stylsheet" data-href="{{ 'theme.css' | asset_url }}">
+  
   {%- render 'css-variables' -%}
 
   <script>
@@ -195,18 +202,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     };
   </script>
 
-  {%- render 'header-scripts.zipifypages', renderctx: 'thm' -%}{{ content_for_header }}
+  {%- render 'header-scripts.zipifypages', renderctx: 'thm' -%}
+  
+     {%- if request.design_mode or template contains 'cart' or template contains 'checkout' -%}
+            {{ content_for_header }}
+    {%- else -%}
+            {% capture content_for_header2 %}{{ content_for_header }}{% endcapture %}
+            {{ content_for_header2 | replace: ' defer="defer" ', ' type="lazyload_js" ' | replace: " src=", " data-src="| replace: "DOMContentLoaded", "appco-DOMContentLoaded" | replace: "window.addEventListener('load', asyncLoad, false);", "window.addEventListener('appco-DOMContentLoaded', asyncLoad, false);" | replace: "addEventListener('load', prefetchAssets);", "addEventListener('appco-DOMContentLoaded', prefetchAssets);" }}
+            <script>var trekkie=[];trekkie.integrations=!0;window.BOOMR={},window.BOOMR.version=true;</script>
+    {%- endif -%}
 
-  <script src="{{ 'vendor-scripts-v11.js' | asset_url | split: '?' | first }}" defer="defer"></script>
+  <script type="lazyload_js" data-src="{{ 'vendor-scripts-v11.js' | asset_url | split: '?' | first }}"></script>
 
   {%- if shop.enabled_currencies.size > 1 -%}
-    <link rel="stylesheet" href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
+    <link rel="stylesheet" data-href="{{ 'country-flags.css' | asset_url | split: '?' | first }}">
   {%- endif -%}
 
   
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+  <script type="lazyload_js" data-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script type="lazyload_js" data-src="{{ 'theme.js' | asset_url }}"></script>
 
   {%- if request.page_type contains 'customers/' -%}
     <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
@@ -217,6 +232,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   {% endif %}
 
 	{{ shop.metafields.loox["global_html_head"] }}
+  {% render 'app-block' %}
+  {% render 'index-css' %}
+  {% render 'zipifypage-css' %}
 </head>
 
 <body class="template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if request.path == '/challenge' %} template-challange{% endif %}" data-center-text="{{ settings.type_body_align_text }}" data-button_style="{{ settings.button_style }}" data-type_header_capitalize="{{ settings.type_header_capitalize }}" data-type_headers_align_text="{{ settings.type_headers_align_text }}" data-type_product_capitalize="{{ settings.type_product_capitalize }}" data-swatch_style="{{ settings.swatch_style }}" {% if settings.disable_animations %}data-disable-animations="true"{% endif %}>
@@ -260,10 +278,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </template>
 
-	{{ shop.metafields.loox["global_html_body"] }}
-
-
-
+	{{ shop.metafields.loox["global_html_body"] | replace: '<script async src="', '<script type="lazyload_js" data-src="' }}
   
 {%- render 'page-footer.zipifypages', renderctx: 'thm', ocuapp: oneclickupsellapp -%}
 <!-- PF EDT START -->
@@ -410,7 +425,7 @@ initGorgiasChatPromise.then(async () => {
 {% endif %}
   
 {% if product %}
-<script type="text/javascript">
+<script type="lazyload_js">
   window.addEventListener("load", function() {
     var _learnq = window._learnq || [];
   function addedToCart() {
@@ -448,12 +463,9 @@ $(document).ajaxComplete(function(event, request, settings){
   }
 })
   })
-  
-
-
 </script>
 {% endif %}
-  
-  
+ {% render 'appco-footer' %} 
+ {% render 'footer-app-block' %}
 </body>
 </html>

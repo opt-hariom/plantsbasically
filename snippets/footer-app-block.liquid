@@ -1,0 +1,674 @@
+<script>var loox_global_hash = '1719770031505';
+var is_enable_smart_reviews_sorting = ('false' === 'true') ? true : false;
+</script>
+<style>.loox-reviews-default { max-width: 1200px; margin: 0 auto; }
+.loox-rating .loox-icon { color:#d2b360; }
+:root { --lxs-rating-icon-color: #d2b360; }
+</style>
+<script type="lazyload_js" data-src="https://loox.io/widget/N1-q7Vt2_K/loox.1604556041929.js?shop=plantsbasically.myshopify.com"></script>
+
+<div id="shopify-block-3667842014806057753" class="shopify-block shopify-app-block">
+<!-- BEGIN app snippet: snippet -->
+<script>
+!(function () {
+  if (window.OCUIncart) return;
+
+  window.Zipify = window.Zipify || {};
+  window.OCUApi = window.OCUApi || {};
+  Zipify.OCU = { api: OCUApi };
+})()
+</script>
+
+<style>.ocu-hidden.ocu-hidden.ocu-hidden,.bold_hidden.bold_hidden.bold_hidden{display:none !important}</style>
+<script type="lazyload_js">
+!function() {
+if (window.OCUIncart) return;const loopReturns=JSON.parse(localStorage.getItem('loop-onstore-data'));if (loopReturns && loopReturns.active) return;
+window.OCUIncart={...(window.OCUIncart ||{}),version:'2024/06/13',cart_items:[],subscription_tags:'',money_format:'Rs. {{amount}}',option_selection:'//www.plantsbasically.com/cdn/shopifycloud/shopify/assets/themes_support/option_selection-86cdd286ddf3be7e25d68b9fc5965d7798a3ff6228ff79af67b3f4e41d6a34be.js',metafields:{main:
+  {
+      general: {"settings":{"app_endpoint":"https://ocu.zipify.com","proxy_url":"/apps/oneclickupsell","sdp":"https://e7d54b729aaf49ea8b2f80dae22860aa@sentry.zipify.com/52","inc_sdp":"https://f14faca962674f149161045845b21b35@sentry.zipify.com/50","popup_locations":{"product":false,"cart":true},"popup_settings":{"popup_frequency":"everytime"},"snippet_source":"extension","features":{"ppw":true},"offer_scripts":{"zipify-oneclickupsell-multiple":false,"zipify-oneclickupsell-single":true,"zipify-oneclickupsell-on-page":true}},"integrations":{"skip_cart":"false"}},
+  }
+ ||{},get general() {return this.main.general ||{};},get settings() {return this.general.settings ||{};},get triggers() {return this.general.triggers ? this.general.triggers.pre_checkout:{};},get proxy_url() {return this.settings.proxy_url ||'/apps/secure-checkout';},get scripts() {const onPage='zipify-oneclickupsell-on-page';const scripts=this.general.settings.offer_scripts ?? {};const vendor='zipify-oneclickupsell-vendor';const loaded=Zipify.OCU.api.loaded ||{};if (Shopify?.designMode && !scripts[onPage]) scripts[onPage]=true;const uris=Object .entries(scripts) .reduce((acc,[script,enabled]) => (enabled && !script.includes('.js') && !loaded[script] ? [...acc,script]:acc),[]);return uris.length ? [...uris,vendor]:uris;}},get hasNotOfferInCart() {if (!this.cart_items.length) return true;return !this.cart_items.find(function(item) {return item && item.properties && (item.properties._ocu_offer_id ||item.properties._ocu_product_page_id);});},get hasWidgetOffersInCart() {if (!this.cart_items.length) return true;return this.cart_items.find(function(item) {return item && item.properties && item.properties._ocu_product_page_id;});},get settings() {return this.metafields.settings.popup_settings;},get proxy_url() {return this.metafields.proxy_url;},get appEndpoint() {return this.metafields.settings.app_endpoint;},get popupLocation() {return this.metafields.general.settings.popup_locations;},get isEmptyCart() {return !this.cart_items.length && this.popupLocation.product;},get permanent_domain() {return Zipify.OCU.lqd.permanent_domain;},get hasWidgetOffers() {return !!Object.keys(OCUApi.store.get('productPageWidget')).length;},preventHandle(checkoutButton,addToCartButton) {return OCUApi.productLocationOnly && !this.popupLocation.cart && checkoutButton && !addToCartButton;}};Zipify.OCU.lqd={cart:{"note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"INR","items_subtotal_price":0,"cart_level_discount_applications":[],"checkout_charge_amount":0},path:'' ==='true' ? 'd56719fefdd75e95ba06caea3d9a3732':'5965fedc7708e03e1024db4bf2ed5fe6',template_name:'index',template_suffix:'',shop_currency:'USD',skip_cart:OCUIncart.metafields.general.integrations.skip_cart ==='true',skip_cart_only:'false' ==='true',cart_products_json:JSON.parse("[]"),cart_collections_json:[],cart_variants_json:[],customer_id:"",customer:{id:"",email:''},customer_tags:[],proxy_url:OCUIncart.metafields.general.settings.proxy_url,scripts:OCUIncart.metafields.scripts,permanent_domain:'plantsbasically.myshopify.com',current_domain:'www.plantsbasically.com',disabled_by_subscription_app:false,subscription_app_enabled:false,subscription_products_json:'',subscription_variants_json:'',subscription_products_size:0,integrate_with_recharge:'' ==='true',product:null ||OCUApi.product,collectionProducts:null,product_tags:[],amazon_pay:'' ==='true',themePopup:'' ==='true' ||'' ==='true',root_url:'/',themeSkipCart:'' ==='redirect_checkout' ||'' ==='true' ||'' ==='skip_cart',get upsell_cart_include_subscription_upsells() {var self=this;var hasSubscription=this.product_tags.reduce(function(acc,tag) {return acc ||~self.postcheckout_tags.indexOf(tag.toLowerCase());},false);return hasSubscription;},get isThemePopupTag() {return this.product && this.product.tags.some(function(tag) {return /cross-sell-\d/.test(tag);});},get isSkipCartPage() {return /index|collection|product/.test(this.template_name);},get isSkipCartCondition() {return (this.skip_cart ||this.themeSkipCart) && this.isSkipCartPage && !this.isThemePopupTag;},get checkoutUrl() {return (this.root_url ==='/' ? '':this.root_url) + '/checkout';},get isPopupTriggerPage() {const popupLocation={...OCUIncart.popupLocation};if (OCUApi.enableCollectionLocation) {popupLocation.collection=popupLocation.product;} if (OCUApi.enableCustomPages) {const pageName=OCUApi.customPageName ||'page';popupLocation[pageName]=popupLocation.product && OCUApi.enableCustomPages.includes(location.pathname);} if (lqd.template_suffix ==='zipifypages' && popupLocation['product']) return popupLocation['product'];return popupLocation[Zipify.OCU.lqd.template_name];}};Zipify.OCU.lqd.cart_products_json=Zipify.OCU.lqd.cart_products_json.filter(function(item) {return item.handle && !item.error;});const lqd=Zipify.OCU.lqd;if (Zipify.OCU.loadScriptTags) Zipify.OCU.loadScriptTags();
+function _typeof(t){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}function _regeneratorRuntime(){"use strict";_regeneratorRuntime=function(){return a};var u,a={},t=Object.prototype,f=t.hasOwnProperty,l=Object.defineProperty||function(t,e,r){t[e]=r.value},e="function"==typeof Symbol?Symbol:{},n=e.iterator||"@@iterator",r=e.asyncIterator||"@@asyncIterator",o=e.toStringTag||"@@toStringTag";function i(t,e,r){return Object.defineProperty(t,e,{value:r,enumerable:!0,configurable:!0,writable:!0}),t[e]}try{i({},"")}catch(u){i=function(t,e,r){return t[e]=r}}function c(t,e,r,n){var o,i,a,c,e=e&&e.prototype instanceof g?e:g,e=Object.create(e.prototype),n=new j(n||[]);return l(e,"_invoke",{value:(o=t,i=r,a=n,c=h,function(t,e){if(c===y)throw new Error("Generator is already running");if(c===d){if("throw"===t)throw e;return{value:u,done:!0}}for(a.method=t,a.arg=e;;){var r=a.delegate;if(r){r=function t(e,r){var n=r.method,o=e.iterator[n];if(o===u)return r.delegate=null,"throw"===n&&e.iterator.return&&(r.method="return",r.arg=u,t(e,r),"throw"===r.method)||"return"!==n&&(r.method="throw",r.arg=new TypeError("The iterator does not provide a '"+n+"' method")),v;n=s(o,e.iterator,r.arg);if("throw"===n.type)return r.method="throw",r.arg=n.arg,r.delegate=null,v;o=n.arg;return o?o.done?(r[e.resultName]=o.value,r.next=e.nextLoc,"return"!==r.method&&(r.method="next",r.arg=u),r.delegate=null,v):o:(r.method="throw",r.arg=new TypeError("iterator result is not an object"),r.delegate=null,v)}(r,a);if(r){if(r===v)continue;return r}}if("next"===a.method)a.sent=a._sent=a.arg;else if("throw"===a.method){if(c===h)throw c=d,a.arg;a.dispatchException(a.arg)}else"return"===a.method&&a.abrupt("return",a.arg);c=y;r=s(o,i,a);if("normal"===r.type){if(c=a.done?d:p,r.arg===v)continue;return{value:r.arg,done:a.done}}"throw"===r.type&&(c=d,a.method="throw",a.arg=r.arg)}})}),e}function s(t,e,r){try{return{type:"normal",arg:t.call(e,r)}}catch(t){return{type:"throw",arg:t}}}a.wrap=c;var h="suspendedStart",p="suspendedYield",y="executing",d="completed",v={};function g(){}function m(){}function w(){}var e={},b=(i(e,n,function(){return this}),Object.getPrototypeOf),b=b&&b(b(S([]))),L=(b&&b!==t&&f.call(b,n)&&(e=b),w.prototype=g.prototype=Object.create(e));function x(t){["next","throw","return"].forEach(function(e){i(t,e,function(t){return this._invoke(e,t)})})}function E(a,c){var e;l(this,"_invoke",{value:function(r,n){function t(){return new c(function(t,e){!function e(t,r,n,o){var i,t=s(a[t],a,r);if("throw"!==t.type)return(r=(i=t.arg).value)&&"object"==_typeof(r)&&f.call(r,"__await")?c.resolve(r.__await).then(function(t){e("next",t,n,o)},function(t){e("throw",t,n,o)}):c.resolve(r).then(function(t){i.value=t,n(i)},function(t){return e("throw",t,n,o)});o(t.arg)}(r,n,t,e)})}return e=e?e.then(t,t):t()}})}function _(t){var e={tryLoc:t[0]};1 in t&&(e.catchLoc=t[1]),2 in t&&(e.finallyLoc=t[2],e.afterLoc=t[3]),this.tryEntries.push(e)}function O(t){var e=t.completion||{};e.type="normal",delete e.arg,t.completion=e}function j(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function S(e){if(e||""===e){var r,t=e[n];if(t)return t.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length))return r=-1,(t=function t(){for(;++r<e.length;)if(f.call(e,r))return t.value=e[r],t.done=!1,t;return t.value=u,t.done=!0,t}).next=t}throw new TypeError(_typeof(e)+" is not iterable")}return l(L,"constructor",{value:m.prototype=w,configurable:!0}),l(w,"constructor",{value:m,configurable:!0}),m.displayName=i(w,o,"GeneratorFunction"),a.isGeneratorFunction=function(t){t="function"==typeof t&&t.constructor;return!!t&&(t===m||"GeneratorFunction"===(t.displayName||t.name))},a.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,w):(t.__proto__=w,i(t,o,"GeneratorFunction")),t.prototype=Object.create(L),t},a.awrap=function(t){return{__await:t}},x(E.prototype),i(E.prototype,r,function(){return this}),a.AsyncIterator=E,a.async=function(t,e,r,n,o){void 0===o&&(o=Promise);var i=new E(c(t,e,r,n),o);return a.isGeneratorFunction(e)?i:i.next().then(function(t){return t.done?t.value:i.next()})},x(L),i(L,o,"Generator"),i(L,n,function(){return this}),i(L,"toString",function(){return"[object Generator]"}),a.keys=function(t){var e,r=Object(t),n=[];for(e in r)n.push(e);return n.reverse(),function t(){for(;n.length;){var e=n.pop();if(e in r)return t.value=e,t.done=!1,t}return t.done=!0,t}},a.values=S,j.prototype={constructor:j,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=u,this.done=!1,this.delegate=null,this.method="next",this.arg=u,this.tryEntries.forEach(O),!t)for(var e in this)"t"===e.charAt(0)&&f.call(this,e)&&!isNaN(+e.slice(1))&&(this[e]=u)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(r){if(this.done)throw r;var n=this;function t(t,e){return i.type="throw",i.arg=r,n.next=t,e&&(n.method="next",n.arg=u),!!e}for(var e=this.tryEntries.length-1;0<=e;--e){var o=this.tryEntries[e],i=o.completion;if("root"===o.tryLoc)return t("end");if(o.tryLoc<=this.prev){var a=f.call(o,"catchLoc"),c=f.call(o,"finallyLoc");if(a&&c){if(this.prev<o.catchLoc)return t(o.catchLoc,!0);if(this.prev<o.finallyLoc)return t(o.finallyLoc)}else if(a){if(this.prev<o.catchLoc)return t(o.catchLoc,!0)}else{if(!c)throw new Error("try statement without catch or finally");if(this.prev<o.finallyLoc)return t(o.finallyLoc)}}}},abrupt:function(t,e){for(var r=this.tryEntries.length-1;0<=r;--r){var n=this.tryEntries[r];if(n.tryLoc<=this.prev&&f.call(n,"finallyLoc")&&this.prev<n.finallyLoc){var o=n;break}}var i=(o=o&&("break"===t||"continue"===t)&&o.tryLoc<=e&&e<=o.finallyLoc?null:o)?o.completion:{};return i.type=t,i.arg=e,o?(this.method="next",this.next=o.finallyLoc,v):this.complete(i)},complete:function(t,e){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&e&&(this.next=e),v},finish:function(t){for(var e=this.tryEntries.length-1;0<=e;--e){var r=this.tryEntries[e];if(r.finallyLoc===t)return this.complete(r.completion,r.afterLoc),O(r),v}},catch:function(t){for(var e=this.tryEntries.length-1;0<=e;--e){var r,n,o=this.tryEntries[e];if(o.tryLoc===t)return"throw"===(r=o.completion).type&&(n=r.arg,O(o)),n}throw new Error("illegal catch attempt")},delegateYield:function(t,e,r){return this.delegate={iterator:S(t),resultName:e,nextLoc:r},"next"===this.method&&(this.arg=u),v}},a}function asyncGeneratorStep(t,e,r,n,o,i,a){try{var c=t[i](a),u=c.value}catch(t){return void r(t)}c.done?e(u):Promise.resolve(u).then(n,o)}function _asyncToGenerator(c){return function(){var t=this,a=arguments;return new Promise(function(e,r){var n=c.apply(t,a);function o(t){asyncGeneratorStep(n,e,r,o,i,"next",t)}function i(t){asyncGeneratorStep(n,e,r,o,i,"throw",t)}o(void 0)})}}_asyncToGenerator(_regeneratorRuntime().mark(function t(){var e,r,n,o,i;return _regeneratorRuntime().wrap(function(t){for(;;)switch(t.prev=t.next){case 0:if(0,"https://".concat(void 0),e="".concat("https://d1npnstlfekkfz.cloudfront.net"),r=Zipify.OCU.lqd.scripts,n=['https://cdn.shopify.com/extensions/688203fe-25a2-4e66-a8d6-c0b442343441/one-click-upsell-zipify-ocu-79/assets/zipify-oneclickupsell-extension.js'],Zipify.OCU.cdn="https://d1u9wuqimc88kc.cloudfront.net",Zipify.OCU.api.loaded=Zipify.OCU.api.loaded||{},o=function(t){var e=1<arguments.length&&void 0!==arguments[1]?arguments[1]:"",r=2<arguments.length&&void 0!==arguments[2]?arguments[2]:".js",n=document.createElement("script");Zipify.OCU.api.loaded[t]=!0,n.src="".concat(e).concat(t).concat(r),n.defer=!0,document.head.append(n)},i=function(){r.filter(function(t){return!0}).forEach(function(t){return o(t,"".concat(e,"/"))})},n.forEach(function(t){return o(t,"","")}),OCUApi.loadScriptsOnWindowLoad)return t.abrupt("return",window.addEventListener("load",i));t.next=13;break;case 13:i();case 14:case"end":return t.stop()}},t)}))();
+}();
+</script>
+
+<!-- END app snippet -->
+</div>
+
+<div id="shopify-block-12643349056429947648" class="shopify-block shopify-app-block">
+<script type="lazyload_js" data-src="https://cdn.shopify.com/extensions/193ca65c-00b8-4a82-be7d-10cca2bb2b9d/sticky-add-to-cart-booster-pro-5/assets/satcb.min.js"></script>
+</div>
+
+{% comment %}
+<div id="shopify-block-14952540001915115444" class="shopify-block shopify-app-block">
+
+<link rel="stylesheet" data-href="https://cdn.shopify.com/extensions/3630da51-f262-4256-bd02-72d84ec7a84b/upcart-cart-drawer-47/assets/upcart-stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.shopify.com/extensions/3630da51-f262-4256-bd02-72d84ec7a84b/upcart-cart-drawer-47/assets/upcart-stylesheet.css"></noscript>
+
+<script>
+  function b64DecodeUnicode(str) {
+    try {
+        return decodeURIComponent(
+        atob(str)
+            .split('')
+            .map(function (c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            })
+            .join(''),
+        );
+    } catch {
+        return str;
+    }
+  }
+</script>
+  
+<script>
+    window.upcartSettings = {};
+    window.upcartSettings.upcartSettings = {};
+    window.upcartSettings.upcartEditorSettings = {};
+    window.upcartSettings.stickyCartButtonEditorSettings = {};
+
+    window.upcartSettings.upcartSettings.cartPosition = b64DecodeUnicode("cmlnaHQ=");
+    if (window.upcartSettings.upcartSettings.cartPosition === '') {
+        window.upcartSettings.upcartSettings.cartPosition = b64DecodeUnicode("cmlnaHQ=");
+    }
+    window.upcartSettings.upcartSettings.disableSticky = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.disableSticky === '') {
+        window.upcartSettings.upcartSettings.disableSticky = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.disableSticky = JSON.parse(window.upcartSettings.upcartSettings.disableSticky);
+    window.upcartSettings.upcartSettings.openOnAddToCart = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartSettings.openOnAddToCart === '') {
+        window.upcartSettings.upcartSettings.openOnAddToCart = b64DecodeUnicode("dHJ1ZQ==");
+    }
+    window.upcartSettings.upcartSettings.openOnAddToCart = JSON.parse(window.upcartSettings.upcartSettings.openOnAddToCart);
+    window.upcartSettings.upcartSettings.redirectToCart = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.redirectToCart === '') {
+        window.upcartSettings.upcartSettings.redirectToCart = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.redirectToCart = JSON.parse(window.upcartSettings.upcartSettings.redirectToCart);
+    window.upcartSettings.upcartSettings.enableCartSkeletons = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartSettings.enableCartSkeletons === '') {
+        window.upcartSettings.upcartSettings.enableCartSkeletons = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.enableCartSkeletons = JSON.parse(window.upcartSettings.upcartSettings.enableCartSkeletons);
+    window.upcartSettings.upcartSettings.translations = b64DecodeUnicode("eyJjYXJ0VGl0bGUiOiJDYXJ0IOKAoiB7e2NhcnRfcXVhbnRpdHl9fSIsImNoZWNrb3V0IjoiQ2hlY2tvdXQg4oCiIHt7dG90YWxfcHJpY2V9fSIsImFkZFRleHQiOiJBZGQiLCJlbXB0eUNhcnQiOiJZb3VyIGNhcnQgaXMgZW1wdHkiLCJkaXNjb3VudFNhdmluZ3MiOiJTYXZlIiwiY29udGludWVTaG9wcGluZyI6Ik9yIGNvbnRpbnVlIHNob3BwaW5nIiwidG90YWxTYXZpbmdzIjoiRGlzY291bnRzIn0=");
+    if (window.upcartSettings.upcartSettings.translations === '') {
+        window.upcartSettings.upcartSettings.translations = b64DecodeUnicode("eyJjYXJ0VGl0bGUiOiJDYXJ0IOKAoiB7e2NhcnRfcXVhbnRpdHl9fSIsImNoZWNrb3V0IjoiQ2hlY2tvdXQg4oCiIHt7dG90YWxfcHJpY2V9fSIsImFkZFRleHQiOiJBZGQiLCJlbXB0eUNhcnQiOiJZb3VyIGNhcnQgaXMgZW1wdHkiLCJkaXNjb3VudFNhdmluZ3MiOiJTYXZlIiwiY29udGludWVTaG9wcGluZyI6Ik9yIGNvbnRpbnVlIHNob3BwaW5nIiwidG90YWxTYXZpbmdzIjoiRGlzY291bnRzIn0=");
+    }
+    window.upcartSettings.upcartSettings.translations = JSON.parse(window.upcartSettings.upcartSettings.translations);
+    window.upcartSettings.upcartSettings.htmlFields = b64DecodeUnicode("eyJhYm92ZUZvb3RlciI6IiIsImFib3ZlSGVhZGVyIjoiIiwiYmVsb3dIZWFkZXIiOiIiLCJiZXR3ZWVuTGluZUl0ZW1zIjoiIiwiYWJvdmVDaGVja291dEJ1dHRvbiI6IiIsImJlbG93Q2hlY2tvdXRCdXR0b24iOiIiLCJib3R0b21PZkNhcnQiOiIiLCJvbkVtcHR5Q2FydCI6IiIsInNjcmlwdHNCZWZvcmVMb2FkIjoiIn0=");
+    if (window.upcartSettings.upcartSettings.htmlFields === '') {
+        window.upcartSettings.upcartSettings.htmlFields = b64DecodeUnicode("eyJhYm92ZUZvb3RlciI6IiIsImFib3ZlSGVhZGVyIjoiIiwiYmVsb3dIZWFkZXIiOiIiLCJiZXR3ZWVuTGluZUl0ZW1zIjoiIiwiYWJvdmVDaGVja291dEJ1dHRvbiI6IiIsImJlbG93Q2hlY2tvdXRCdXR0b24iOiIiLCJib3R0b21PZkNhcnQiOiIiLCJvbkVtcHR5Q2FydCI6IiIsInNjcmlwdHNCZWZvcmVMb2FkIjoiIn0=");
+    }
+    window.upcartSettings.upcartSettings.htmlFields = JSON.parse(window.upcartSettings.upcartSettings.htmlFields);
+    window.upcartSettings.upcartSettings.automaticDiscount = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartSettings.automaticDiscount === '') {
+        window.upcartSettings.upcartSettings.automaticDiscount = b64DecodeUnicode("dHJ1ZQ==");
+    }
+    window.upcartSettings.upcartSettings.automaticDiscount = JSON.parse(window.upcartSettings.upcartSettings.automaticDiscount);
+    window.upcartSettings.upcartSettings.basePriceForDiscount = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.basePriceForDiscount === '') {
+        window.upcartSettings.upcartSettings.basePriceForDiscount = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.basePriceForDiscount = JSON.parse(window.upcartSettings.upcartSettings.basePriceForDiscount);
+    window.upcartSettings.upcartSettings.hideSingleUnderscoredProperties = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.hideSingleUnderscoredProperties === '') {
+        window.upcartSettings.upcartSettings.hideSingleUnderscoredProperties = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.hideSingleUnderscoredProperties = JSON.parse(window.upcartSettings.upcartSettings.hideSingleUnderscoredProperties);
+    window.upcartSettings.upcartSettings.showContinueShoppingButton = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartSettings.showContinueShoppingButton === '') {
+        window.upcartSettings.upcartSettings.showContinueShoppingButton = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.showContinueShoppingButton = JSON.parse(window.upcartSettings.upcartSettings.showContinueShoppingButton);
+    window.upcartSettings.upcartSettings.ajaxRaceConditionPrevention = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.ajaxRaceConditionPrevention === '') {
+        window.upcartSettings.upcartSettings.ajaxRaceConditionPrevention = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.ajaxRaceConditionPrevention = JSON.parse(window.upcartSettings.upcartSettings.ajaxRaceConditionPrevention);
+    window.upcartSettings.upcartSettings.htmlFieldForceReRender = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.htmlFieldForceReRender === '') {
+        window.upcartSettings.upcartSettings.htmlFieldForceReRender = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.htmlFieldForceReRender = JSON.parse(window.upcartSettings.upcartSettings.htmlFieldForceReRender);
+    window.upcartSettings.upcartSettings.skipGoogleFonts = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartSettings.skipGoogleFonts === '') {
+        window.upcartSettings.upcartSettings.skipGoogleFonts = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.skipGoogleFonts = JSON.parse(window.upcartSettings.upcartSettings.skipGoogleFonts);
+    window.upcartSettings.upcartSettings.overrideScrollLocking = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartSettings.overrideScrollLocking === '') {
+        window.upcartSettings.upcartSettings.overrideScrollLocking = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.overrideScrollLocking = JSON.parse(window.upcartSettings.upcartSettings.overrideScrollLocking);
+    window.upcartSettings.upcartSettings.trafficAllocationPercent = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartSettings.trafficAllocationPercent === '') {
+        window.upcartSettings.upcartSettings.trafficAllocationPercent = b64DecodeUnicode("MTAw");
+    }
+    window.upcartSettings.upcartSettings.updateItemIdentifier = b64DecodeUnicode("a2V5");
+    if (window.upcartSettings.upcartSettings.updateItemIdentifier === '') {
+        window.upcartSettings.upcartSettings.updateItemIdentifier = b64DecodeUnicode("bGluZQ==");
+    }
+    window.upcartSettings.upcartSettings.customCSS = b64DecodeUnicode("LmEsIHRleHRhcmVhIHsKICAgdGV4dC1kZWNvcmF0aW9uLWxpbmU6IG5vbmU7IAogICB0ZXh0LWRlY29yYXRpb246IG5vbmU7Cn0=");
+    if (window.upcartSettings.upcartSettings.customCSS === '') {
+        window.upcartSettings.upcartSettings.customCSS = b64DecodeUnicode("Knt9");
+    }
+    window.upcartSettings.upcartSettings.customStickyCartCSS = b64DecodeUnicode("Knt9");
+    if (window.upcartSettings.upcartSettings.customStickyCartCSS === '') {
+        window.upcartSettings.upcartSettings.customStickyCartCSS = b64DecodeUnicode("Knt9");
+    }
+    window.upcartSettings.upcartSettings.integrationZapietEnabled = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.integrationZapietEnabled === '') {
+        window.upcartSettings.upcartSettings.integrationZapietEnabled = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.integrationZapietEnabled = JSON.parse(window.upcartSettings.upcartSettings.integrationZapietEnabled);
+    window.upcartSettings.upcartSettings.integrationYmqEnabled = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartSettings.integrationYmqEnabled === '') {
+        window.upcartSettings.upcartSettings.integrationYmqEnabled = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartSettings.integrationYmqEnabled = JSON.parse(window.upcartSettings.upcartSettings.integrationYmqEnabled);
+    window.upcartSettings.upcartEditorSettings.cartIsEnabled = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartEditorSettings.cartIsEnabled === '') {
+        window.upcartSettings.upcartEditorSettings.cartIsEnabled = b64DecodeUnicode("dHJ1ZQ==");
+    }
+    window.upcartSettings.upcartEditorSettings.cartIsEnabled = JSON.parse(window.upcartSettings.upcartEditorSettings.cartIsEnabled);
+    window.upcartSettings.upcartEditorSettings.settingsModule = b64DecodeUnicode("eyJmaWVsZHMiOnsiY29tcGFyZUF0UHJpY2UiOnRydWUsImluaGVyaXRGb250cyI6dHJ1ZSwiYmFja2dyb3VuZENvbG9yIjoiI0ZGRkZGRiIsImNhcnRBY2NlbnRDb2xvciI6IiNmZmZmZmYiLCJidXR0b25Db2xvciI6IiNkMmIzNjAiLCJidXR0b25UZXh0Q29sb3IiOiIjRkZGRkZGIiwiYnV0dG9uVGV4dEhvdmVyQ29sb3IiOiIjZTllOWU5IiwiY2FydFRleHRDb2xvciI6IiMwMDAwMDAifX0=");
+    if (window.upcartSettings.upcartEditorSettings.settingsModule === '') {
+        window.upcartSettings.upcartEditorSettings.settingsModule = b64DecodeUnicode("eyJmaWVsZHMiOnsiY29tcGFyZUF0UHJpY2UiOnRydWUsImluaGVyaXRGb250cyI6dHJ1ZSwiYmFja2dyb3VuZENvbG9yIjoiI0ZGRkZGRiIsImNhcnRBY2NlbnRDb2xvciI6IiNmNmY2ZjciLCJidXR0b25Db2xvciI6IiMwMDAwMDAiLCJidXR0b25UZXh0Q29sb3IiOiIjRkZGRkZGIiwiYnV0dG9uVGV4dEhvdmVyQ29sb3IiOiIjZTllOWU5IiwiY2FydFRleHRDb2xvciI6IiMwMDAwMDAifX0=");
+    }
+    window.upcartSettings.upcartEditorSettings.settingsModule = JSON.parse(window.upcartSettings.upcartEditorSettings.settingsModule);
+    window.upcartSettings.upcartEditorSettings.announcementModule = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.announcementModule === '') {
+        window.upcartSettings.upcartEditorSettings.announcementModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.announcementModule = JSON.parse(window.upcartSettings.upcartEditorSettings.announcementModule);
+    window.upcartSettings.upcartEditorSettings.announcementEditor = b64DecodeUnicode("PHA+WW91ciBwcm9kdWN0cyBhcmUgcmVzZXJ2ZWQgZm9yIDxiPntUSU1FUn08L2I+IG1pbnV0ZXMhPC9wPg==");
+    if (window.upcartSettings.upcartEditorSettings.announcementEditor === '') {
+        window.upcartSettings.upcartEditorSettings.announcementEditor = b64DecodeUnicode("PHA+WW91ciBwcm9kdWN0cyBhcmUgcmVzZXJ2ZWQgZm9yIDxiPntUSU1FUn08L2I+IG1pbnV0ZXMhPC9wPg==");
+    }
+    window.upcartSettings.upcartEditorSettings.announcementBackgroundColor = b64DecodeUnicode("I0NERTBFMA==");
+    if (window.upcartSettings.upcartEditorSettings.announcementBackgroundColor === '') {
+        window.upcartSettings.upcartEditorSettings.announcementBackgroundColor = b64DecodeUnicode("I0NERTBFMA==");
+    }
+    window.upcartSettings.upcartEditorSettings.announcementModulePosition = b64DecodeUnicode("dG9w");
+    if (window.upcartSettings.upcartEditorSettings.announcementModulePosition === '') {
+        window.upcartSettings.upcartEditorSettings.announcementModulePosition = b64DecodeUnicode("dG9w");
+    }
+    window.upcartSettings.upcartEditorSettings.announcementBorderColor = b64DecodeUnicode("I0M1RTZGRA==");
+    if (window.upcartSettings.upcartEditorSettings.announcementBorderColor === '') {
+        window.upcartSettings.upcartEditorSettings.announcementBorderColor = b64DecodeUnicode("I0M1RTZGRA==");
+    }
+    window.upcartSettings.upcartEditorSettings.announcementTimer = b64DecodeUnicode("MA==");
+    if (window.upcartSettings.upcartEditorSettings.announcementTimer === '') {
+        window.upcartSettings.upcartEditorSettings.announcementTimer = b64DecodeUnicode("MDA6MDA=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsModule = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartEditorSettings.rewardsModule === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsModule = JSON.parse(window.upcartSettings.upcartEditorSettings.rewardsModule);
+    window.upcartSettings.upcartEditorSettings.rewardsBarBackgroundColor = b64DecodeUnicode("I0UyRTJFMg==");
+    if (window.upcartSettings.upcartEditorSettings.rewardsBarBackgroundColor === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsBarBackgroundColor = b64DecodeUnicode("I0UyRTJFMg==");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsBarForegroundColor = b64DecodeUnicode("I2QyYjM2MA==");
+    if (window.upcartSettings.upcartEditorSettings.rewardsBarForegroundColor === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsBarForegroundColor = b64DecodeUnicode("IzkzRDNGRg==");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsBasis = b64DecodeUnicode("Y2FydFRvdGFs");
+    if (window.upcartSettings.upcartEditorSettings.rewardsBasis === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsBasis = b64DecodeUnicode("Y2FydFRvdGFs");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsProductLinkVisible = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.rewardsProductLinkVisible === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsProductLinkVisible = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsProductLinkVisible = JSON.parse(window.upcartSettings.upcartEditorSettings.rewardsProductLinkVisible);
+    window.upcartSettings.upcartEditorSettings.rewardsTargetType = b64DecodeUnicode("cHJvZHVjdHNPck9yZGVy");
+    if (window.upcartSettings.upcartEditorSettings.rewardsTargetType === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsTargetType = b64DecodeUnicode("cHJvZHVjdHNPck9yZGVy");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsMinAmount = b64DecodeUnicode("MTI1");
+    if (window.upcartSettings.upcartEditorSettings.rewardsMinAmount === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsMinAmount = b64DecodeUnicode("MTI1");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsEditor = b64DecodeUnicode("PHA+WW914oCZcmUgPGI+e0FNT1VOVH08L2I+IGF3YXkgZnJvbSBmcmVlIHNoaXBwaW5nITwvcD4=");
+    if (window.upcartSettings.upcartEditorSettings.rewardsEditor === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsEditor = b64DecodeUnicode("PHA+WW914oCZcmUgPGI+e0FNT1VOVH08L2I+IGF3YXkgZnJvbSBmcmVlIHNoaXBwaW5nITwvcD4=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsEditorAfterText = b64DecodeUnicode("PHA+RnJlZSBzaGlwcGluZyA8c3BhbiBzdHlsZT0iY29sb3I6IHJnYig0OCw0OCw0OCk7YmFja2dyb3VuZC1jb2xvcjogcmdiKDI1NSwyNTUsMjU1KTtmb250LXNpemU6IDEzcHg7Zm9udC1mYW1pbHk6IEludGVyLCAtYXBwbGUtc3lzdGVtLCAic3lzdGVtLXVpIiwgIlNhbiBGcmFuY2lzY28iLCAiU2Vnb2UgVUkiLCBSb2JvdG8sICJIZWx2ZXRpY2EgTmV1ZSIsIHNhbnMtc2VyaWY7Ij7wn5OmPC9zcGFuPiA8c3Ryb25nPnVubG9ja2VkITwvc3Ryb25nPjwvcD4K");
+    if (window.upcartSettings.upcartEditorSettings.rewardsEditorAfterText === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsEditorAfterText = b64DecodeUnicode("RnJlZSBzaGlwcGluZyB1bmxvY2tlZCE=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsEditorForItemCount = b64DecodeUnicode("PHA+WW914oCZcmUgPGI+e0NPVU5UfTwvYj4gcHJvZHVjdHMgYXdheSBmcm9tIGZyZWUgc2hpcHBpbmchPC9wPg==");
+    if (window.upcartSettings.upcartEditorSettings.rewardsEditorForItemCount === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsEditorForItemCount = b64DecodeUnicode("PHA+WW914oCZcmUgPGI+e0NPVU5UfTwvYj4gcHJvZHVjdHMgYXdheSBmcm9tIGZyZWUgc2hpcHBpbmchPC9wPg==");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsItemCount = b64DecodeUnicode("NQ==");
+    if (window.upcartSettings.upcartEditorSettings.rewardsItemCount === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsItemCount = b64DecodeUnicode("NQ==");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsTiers = b64DecodeUnicode("eyJ0aWVycyI6W3sidGFyZ2V0VHlwZSI6InByb2R1Y3RzT3JPcmRlciIsIm1pbkFtb3VudCI6IjgwLjAwIiwiaXRlbUNvdW50IjoiNSIsInRleHRCZWZvcmVSZWFjaGluZ0ZvckNhcnRUb3RhbCI6IjxwPllvdeKAmXJlIHtBTU9VTlR9IGF3YXkgZnJvbSA8c3BhbiBzdHlsZT1cImNvbG9yOiByZ2IoNDgsNDgsNDgpO2JhY2tncm91bmQtY29sb3I6IHJnYigyNTUsMjU1LDI1NSk7Zm9udC1zaXplOiAxM3B4O2ZvbnQtZmFtaWx5OiBJbnRlciwgLWFwcGxlLXN5c3RlbSwgXCJzeXN0ZW0tdWlcIiwgXCJTYW4gRnJhbmNpc2NvXCIsIFwiU2Vnb2UgVUlcIiwgUm9ib3RvLCBcIkhlbHZldGljYSBOZXVlXCIsIHNhbnMtc2VyaWY7XCI+8J+Tpjwvc3Bhbj4gPHN0cm9uZz5mcmVlIHNoaXBwaW5nISA8L3N0cm9uZz48L3A+XG4iLCJ0ZXh0QmVmb3JlUmVhY2hpbmdGb3JJdGVtQ291bnQiOiI8cD5Zb3XigJlyZSA8Yj57Q09VTlR9PC9iPiBwcm9kdWN0cyBhd2F5IGZyb20gZnJlZSBzaGlwcGluZyE8L3A+IiwicmV3YXJkRGVzY3JpcHRpb24iOiJGcmVlIFNoaXBwaW5nIiwicHJvZHVjdHMiOltdfV19");
+    if (window.upcartSettings.upcartEditorSettings.rewardsTiers === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsTiers = b64DecodeUnicode("eyJ0aWVycyI6W10sImdlb0xvY2F0aW9uUHJpY2luZyI6W10sInJld2FyZHNBdXRvQ29udmVydEN1cnJlbmN5IjpmYWxzZSwicmV3YXJkc0dlb0xvY2F0aW9uRW5hYmxlZCI6ZmFsc2UsInVzZVByZURpc2NvdW50ZWRUb3RhbCI6ZmFsc2V9");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsTiers = JSON.parse(window.upcartSettings.upcartEditorSettings.rewardsTiers);
+    window.upcartSettings.upcartEditorSettings.rewardsTierProducts = b64DecodeUnicode("W10=");
+    if (window.upcartSettings.upcartEditorSettings.rewardsTierProducts === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsTierProducts = b64DecodeUnicode("W10=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsTierProducts = JSON.parse(window.upcartSettings.upcartEditorSettings.rewardsTierProducts);
+    window.upcartSettings.upcartEditorSettings.rewardsShowIconWithSingleTier = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.rewardsShowIconWithSingleTier === '') {
+        window.upcartSettings.upcartEditorSettings.rewardsShowIconWithSingleTier = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.rewardsShowIconWithSingleTier = JSON.parse(window.upcartSettings.upcartEditorSettings.rewardsShowIconWithSingleTier);
+    window.upcartSettings.upcartEditorSettings.upsellsModule = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartEditorSettings.upsellsModule === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.upsellsModule = JSON.parse(window.upcartSettings.upcartEditorSettings.upsellsModule);
+    window.upcartSettings.upcartEditorSettings.upsellsDirection = b64DecodeUnicode("aG9yaXpvbnRhbA==");
+    if (window.upcartSettings.upcartEditorSettings.upsellsDirection === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsDirection = b64DecodeUnicode("aG9yaXpvbnRhbA==");
+    }
+    window.upcartSettings.upcartEditorSettings.upsellsTitle = b64DecodeUnicode("PHA+V29ya3MgYmVzdCB3aXRoLi4uPC9wPgo=");
+    if (window.upcartSettings.upcartEditorSettings.upsellsTitle === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsTitle = b64DecodeUnicode("WW91J2xsIGxvdmUgdGhlc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.maximumUpsellsToShow = b64DecodeUnicode("MTA=");
+    if (window.upcartSettings.upcartEditorSettings.maximumUpsellsToShow === '') {
+        window.upcartSettings.upcartEditorSettings.maximumUpsellsToShow = b64DecodeUnicode("MTA=");
+    }
+    window.upcartSettings.upcartEditorSettings.upsellsShouldLimit = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.upsellsShouldLimit === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsShouldLimit = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.upsellsShouldLimit = JSON.parse(window.upcartSettings.upcartEditorSettings.upsellsShouldLimit);
+    window.upcartSettings.upcartEditorSettings.upsellsTrigger = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.upsellsTrigger === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsTrigger = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.upsellsTrigger = JSON.parse(window.upcartSettings.upcartEditorSettings.upsellsTrigger);
+    window.upcartSettings.upcartEditorSettings.showUpsellItemsAlreadyInCart = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.showUpsellItemsAlreadyInCart === '') {
+        window.upcartSettings.upcartEditorSettings.showUpsellItemsAlreadyInCart = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.showUpsellItemsAlreadyInCart = JSON.parse(window.upcartSettings.upcartEditorSettings.showUpsellItemsAlreadyInCart);
+    window.upcartSettings.upcartEditorSettings.upsellsItems = b64DecodeUnicode("W3siaWQiOiIzNzE0NCIsInYiOjIsInRyaWdnZXIiOnsib24iOiJzcGVjaWZpYyIsInNlbGVjdGlvbiI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC85MDQ2NDg5ODI1NTk5Iiwic2hvcnRJZCI6IjkwNDY0ODk4MjU1OTkiLCJ2YXJpYW50cyI6WyI0NzM3NDIyOTMwNzcxMSJdLCJoYW5kbGUiOiJ1bHRpbWF0ZS1qb2ludC1idW5kbGUiLCJ0aXRsZSI6IlVsdGltYXRlIEpvaW50IEJ1bmRsZSJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvODQ5MjQ0MTUzNDc4MyIsInNob3J0SWQiOiI4NDkyNDQxNTM0NzgzIiwidmFyaWFudHMiOlsiNDU0MzU5NjEzNzcwODciXSwiaGFuZGxlIjoiYXRobGV0aWMtYnVuZGxlIiwidGl0bGUiOiJBdGhsZXRpYyBCdW5kbGUifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzg0OTI0MjAwNzE3NDMiLCJzaG9ydElkIjoiODQ5MjQyMDA3MTc0MyIsInZhcmlhbnRzIjpbIjQ1NDM1ODc5ODUwMzAzIl0sImhhbmRsZSI6ImZ1bGwtYnVuZGxlIiwidGl0bGUiOiJGdWxsIEJ1bmRsZSJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvODQ5MjQ1MTEzNTgwNyIsInNob3J0SWQiOiI4NDkyNDUxMTM1ODA3IiwidmFyaWFudHMiOlsiNDU0MzU5NzU2OTY3MDMiXSwiaGFuZGxlIjoiZGVsdXhlLWJ1bmRsZS0yIiwidGl0bGUiOiJEZWx1eGUgQnVuZGxlIn1dfX0sInVwc2VsbCI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC85MDcxMTI4MjQ4NjM5Iiwic2hvcnRJZCI6IjkwNzExMjgyNDg2MzkiLCJ2YXJpYW50cyI6WyI0NzQzOTg1MTE1OTg3MSJdLCJoYW5kbGUiOiJhY2hlLXJlbGllZi1zYWx2ZSIsInRpdGxlIjoiQWNoZSBSZWxpZWYiLCJpbWFnZSI6Imh0dHBzOi8vY2RuLnNob3BpZnkuY29tL3MvZmlsZXMvMS8yOTk1LzMyMzQvZmlsZXMvYWNoZS1yZWxpZWYtZnJvbnQtcmVuZGVyLmpwZz92PTE3MDg0ODY3NjgifV19fSx7ImlkIjoiNDUwMTkiLCJ2IjoyLCJ0cmlnZ2VyIjp7Im9uIjoic3BlY2lmaWMiLCJzZWxlY3Rpb24iOnsidHlwZSI6IlByb2R1Y3QiLCJwcm9kdWN0cyI6W3siaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvODQ5MjQ0NjM4NDQ0NyIsInNob3J0SWQiOiI4NDkyNDQ2Mzg0NDQ3IiwidmFyaWFudHMiOlsiNDU0MzU5NjkxNzU4NzEiXSwiaGFuZGxlIjoiYmFsYW5jZS1idW5kbGUiLCJ0aXRsZSI6IkJhbGFuY2UgQnVuZGxlIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC84NDkyNDM5ODMwODQ3Iiwic2hvcnRJZCI6Ijg0OTI0Mzk4MzA4NDciLCJ2YXJpYW50cyI6WyI0NTQzNTk1NzcwNzA3MSJdLCJoYW5kbGUiOiJzdGFydGVyLWJ1bmRsZSIsInRpdGxlIjoiU3RhcnRlciBCdW5kbGUifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzg0OTI0MjAwNzE3NDMiLCJzaG9ydElkIjoiODQ5MjQyMDA3MTc0MyIsInZhcmlhbnRzIjpbIjQ1NDM1ODc5ODUwMzAzIl0sImhhbmRsZSI6ImZ1bGwtYnVuZGxlIiwidGl0bGUiOiJGdWxsIEJ1bmRsZSJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvOTA0NjQ4OTgyNTU5OSIsInNob3J0SWQiOiI5MDQ2NDg5ODI1NTk5IiwidmFyaWFudHMiOlsiNDczNzQyMjkzMDc3MTEiXSwiaGFuZGxlIjoidWx0aW1hdGUtam9pbnQtYnVuZGxlIiwidGl0bGUiOiJVbHRpbWF0ZSBKb2ludCBCdW5kbGUifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzg0OTI0NDE1MzQ3ODMiLCJzaG9ydElkIjoiODQ5MjQ0MTUzNDc4MyIsInZhcmlhbnRzIjpbIjQ1NDM1OTYxMzc3MDg3Il0sImhhbmRsZSI6ImF0aGxldGljLWJ1bmRsZSIsInRpdGxlIjoiQXRobGV0aWMgQnVuZGxlIn1dfX0sInVwc2VsbCI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC82NzQ0ODc0Nzc4Njk3Iiwic2hvcnRJZCI6IjY3NDQ4NzQ3Nzg2OTciLCJ2YXJpYW50cyI6WyIzOTkwMzA1OTUwOTMyMSJdLCJoYW5kbGUiOiJicmFpbi1uZWN0YXIiLCJ0aXRsZSI6IkJSQUlOIE5FQ1RBUiIsImltYWdlIjoiaHR0cHM6Ly9jZG4uc2hvcGlmeS5jb20vcy9maWxlcy8xLzI5OTUvMzIzNC9maWxlcy9icmFpbi5qcGc/dj0xNzA3MjAzMjIyIn1dfX0seyJpZCI6IjUzMTY5IiwidiI6MiwidHJpZ2dlciI6eyJvbiI6InNwZWNpZmljIiwic2VsZWN0aW9uIjp7InR5cGUiOiJQcm9kdWN0IiwicHJvZHVjdHMiOlt7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzkwNzExMjgyNDg2MzkiLCJzaG9ydElkIjoiOTA3MTEyODI0ODYzOSIsInZhcmlhbnRzIjpbIjQ3NDM5ODUxMTU5ODcxIl0sImhhbmRsZSI6ImFjaGUtcmVsaWVmLXNhbHZlIiwidGl0bGUiOiJBY2hlIFJlbGllZiIsImltYWdlIjoiaHR0cHM6Ly9jZG4uc2hvcGlmeS5jb20vcy9maWxlcy8xLzI5OTUvMzIzNC9maWxlcy9hY2hlLXJlbGllZi1mcm9udC1yZW5kZXIuanBnP3Y9MTcwODQ4Njc2OCJ9XX19LCJ1cHNlbGwiOnsidHlwZSI6IlByb2R1Y3QiLCJwcm9kdWN0cyI6W3siaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxNDQyNjQxMSIsInNob3J0SWQiOiIxNDY1NTE0NDI2NDExIiwidmFyaWFudHMiOlsiNDUyODIzNDk4NzU1MTkiXSwiaGFuZGxlIjoianVpY3ktam9pbnQiLCJ0aXRsZSI6IkpVSUNZIEpPSU5UIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC84OTk5MzYzMjQ4NDQ3Iiwic2hvcnRJZCI6Ijg5OTkzNjMyNDg0NDciLCJ2YXJpYW50cyI6WyI0NzIyOTY1NDMwMzAzOSJdLCJoYW5kbGUiOiJzaGlsYWppdCIsInRpdGxlIjoiU2hpbGFqaXQgUmVzaW4ifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTI2ODk3MDciLCJzaG9ydElkIjoiMTQ2NTUxMjY4OTcwNyIsInZhcmlhbnRzIjpbIjEzNjIxNDEwODU3MDAzIl0sImhhbmRsZSI6ImVsZXZhdGUiLCJ0aXRsZSI6IkVMRVZBVEUifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTU1MDc3NTUiLCJzaG9ydElkIjoiMTQ2NTUxNTUwNzc1NSIsInZhcmlhbnRzIjpbIjEzNjIxNDMwNjE2MTA3Il0sImhhbmRsZSI6ImltbXVuYSIsInRpdGxlIjoiSU1NVU5BIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC82NzQ0ODc0Nzc4Njk3Iiwic2hvcnRJZCI6IjY3NDQ4NzQ3Nzg2OTciLCJ2YXJpYW50cyI6WyIzOTkwMzA1OTUwOTMyMSJdLCJoYW5kbGUiOiJicmFpbi1uZWN0YXIiLCJ0aXRsZSI6IkJSQUlOIE5FQ1RBUiJ9XX19LHsiaWQiOiI0NTg0OCIsInYiOjIsInRyaWdnZXIiOnsib24iOiJzcGVjaWZpYyIsInNlbGVjdGlvbiI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC84OTk5MzYzMjQ4NDQ3Iiwic2hvcnRJZCI6Ijg5OTkzNjMyNDg0NDciLCJ2YXJpYW50cyI6WyI0NzIyOTY1NDMwMzAzOSJdLCJoYW5kbGUiOiJzaGlsYWppdCIsInRpdGxlIjoiU2hpbGFqaXQgUmVzaW4iLCJpbWFnZSI6Imh0dHBzOi8vY2RuLnNob3BpZnkuY29tL3MvZmlsZXMvMS8yOTk1LzMyMzQvZmlsZXMvc2hpbGFqaXQtZnJvbnQuanBnP3Y9MTcwODM4NjQ4NyJ9XX19LCJ1cHNlbGwiOnsidHlwZSI6IlByb2R1Y3QiLCJwcm9kdWN0cyI6W3siaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxMjY4OTcwNyIsInNob3J0SWQiOiIxNDY1NTEyNjg5NzA3IiwidmFyaWFudHMiOlsiMTM2MjE0MTA4NTcwMDMiXSwiaGFuZGxlIjoiZWxldmF0ZSIsInRpdGxlIjoiRUxFVkFURSJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxNTUwNzc1NSIsInNob3J0SWQiOiIxNDY1NTE1NTA3NzU1IiwidmFyaWFudHMiOlsiMTM2MjE0MzA2MTYxMDciXSwiaGFuZGxlIjoiaW1tdW5hIiwidGl0bGUiOiJJTU1VTkEifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTQ0MjY0MTEiLCJzaG9ydElkIjoiMTQ2NTUxNDQyNjQxMSIsInZhcmlhbnRzIjpbIjQ1MjgyMzQ5ODc1NTE5Il0sImhhbmRsZSI6Imp1aWN5LWpvaW50IiwidGl0bGUiOiJKVUlDWSBKT0lOVCJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvNjc0NDg3NDc3ODY5NyIsInNob3J0SWQiOiI2NzQ0ODc0Nzc4Njk3IiwidmFyaWFudHMiOlsiMzk5MDMwNTk1MDkzMjEiXSwiaGFuZGxlIjoiYnJhaW4tbmVjdGFyIiwidGl0bGUiOiJCUkFJTiBORUNUQVIifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzkwNzExMjgyNDg2MzkiLCJzaG9ydElkIjoiOTA3MTEyODI0ODYzOSIsInZhcmlhbnRzIjpbIjQ3NDM5ODUxMTU5ODcxIl0sImhhbmRsZSI6ImFjaGUtcmVsaWVmLXNhbHZlIiwidGl0bGUiOiJBY2hlIFJlbGllZiJ9XX19LHsiaWQiOiI0NjY2OSIsInYiOjIsInRyaWdnZXIiOnsib24iOiJzcGVjaWZpYyIsInNlbGVjdGlvbiI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC82NzQ0ODc0Nzc4Njk3Iiwic2hvcnRJZCI6IjY3NDQ4NzQ3Nzg2OTciLCJ2YXJpYW50cyI6WyIzOTkwMzA1OTUwOTMyMSJdLCJoYW5kbGUiOiJicmFpbi1uZWN0YXIiLCJ0aXRsZSI6IkJSQUlOIE5FQ1RBUiIsImltYWdlIjoiaHR0cHM6Ly9jZG4uc2hvcGlmeS5jb20vcy9maWxlcy8xLzI5OTUvMzIzNC9maWxlcy9icmFpbi5qcGc/dj0xNzA3MjAzMjIyIn1dfX0sInVwc2VsbCI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC84OTk5MzYzMjQ4NDQ3Iiwic2hvcnRJZCI6Ijg5OTkzNjMyNDg0NDciLCJ2YXJpYW50cyI6WyI0NzIyOTY1NDMwMzAzOSJdLCJoYW5kbGUiOiJzaGlsYWppdCIsInRpdGxlIjoiU2hpbGFqaXQgUmVzaW4ifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTQ0MjY0MTEiLCJzaG9ydElkIjoiMTQ2NTUxNDQyNjQxMSIsInZhcmlhbnRzIjpbIjQ1MjgyMzQ5ODc1NTE5Il0sImhhbmRsZSI6Imp1aWN5LWpvaW50IiwidGl0bGUiOiJKVUlDWSBKT0lOVCJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxMjY4OTcwNyIsInNob3J0SWQiOiIxNDY1NTEyNjg5NzA3IiwidmFyaWFudHMiOlsiMTM2MjE0MTA4NTcwMDMiXSwiaGFuZGxlIjoiZWxldmF0ZSIsInRpdGxlIjoiRUxFVkFURSJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxNTUwNzc1NSIsInNob3J0SWQiOiIxNDY1NTE1NTA3NzU1IiwidmFyaWFudHMiOlsiMTM2MjE0MzA2MTYxMDciXSwiaGFuZGxlIjoiaW1tdW5hIiwidGl0bGUiOiJJTU1VTkEifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzkwNzExMjgyNDg2MzkiLCJzaG9ydElkIjoiOTA3MTEyODI0ODYzOSIsInZhcmlhbnRzIjpbIjQ3NDM5ODUxMTU5ODcxIl0sImhhbmRsZSI6ImFjaGUtcmVsaWVmLXNhbHZlIiwidGl0bGUiOiJBY2hlIFJlbGllZiIsImltYWdlIjoiaHR0cHM6Ly9jZG4uc2hvcGlmeS5jb20vcy9maWxlcy8xLzI5OTUvMzIzNC9maWxlcy9hY2hlLXJlbGllZi1mcm9udC1yZW5kZXIuanBnP3Y9MTcwODQ4Njc2OCJ9XX19LHsiaWQiOiIxOTIxNCIsInYiOjIsInRyaWdnZXIiOnsib24iOiJzcGVjaWZpYyIsInNlbGVjdGlvbiI6eyJ0eXBlIjoiUHJvZHVjdCIsInByb2R1Y3RzIjpbeyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC8xNDY1NTE1NTA3NzU1Iiwic2hvcnRJZCI6IjE0NjU1MTU1MDc3NTUiLCJ2YXJpYW50cyI6WyIxMzYyMTQzMDYxNjEwNyJdLCJoYW5kbGUiOiJpbW11bmEiLCJ0aXRsZSI6IklNTVVOQSIsImltYWdlIjoiaHR0cHM6Ly9jZG4uc2hvcGlmeS5jb20vcy9maWxlcy8xLzI5OTUvMzIzNC9maWxlcy9pbW11bmFfNDk0NmM3NWUtYjExZS00Mzk3LTkwNTItMjY5OWI1NDYyODQ1LmpwZz92PTE3MDcyMDM1MzUifV19fSwidXBzZWxsIjp7InR5cGUiOiJQcm9kdWN0IiwicHJvZHVjdHMiOlt7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0Lzg5OTkzNjMyNDg0NDciLCJzaG9ydElkIjoiODk5OTM2MzI0ODQ0NyIsInZhcmlhbnRzIjpbIjQ3MjI5NjU0MzAzMDM5Il0sImhhbmRsZSI6InNoaWxhaml0IiwidGl0bGUiOiJTaGlsYWppdCBSZXNpbiJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxNDQyNjQxMSIsInNob3J0SWQiOiIxNDY1NTE0NDI2NDExIiwidmFyaWFudHMiOlsiNDUyODIzNDk4NzU1MTkiXSwiaGFuZGxlIjoianVpY3ktam9pbnQiLCJ0aXRsZSI6IkpVSUNZIEpPSU5UIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC8xNDY1NTEyNjg5NzA3Iiwic2hvcnRJZCI6IjE0NjU1MTI2ODk3MDciLCJ2YXJpYW50cyI6WyIxMzYyMTQxMDg1NzAwMyJdLCJoYW5kbGUiOiJlbGV2YXRlIiwidGl0bGUiOiJFTEVWQVRFIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC82NzQ0ODc0Nzc4Njk3Iiwic2hvcnRJZCI6IjY3NDQ4NzQ3Nzg2OTciLCJ2YXJpYW50cyI6WyIzOTkwMzA1OTUwOTMyMSJdLCJoYW5kbGUiOiJicmFpbi1uZWN0YXIiLCJ0aXRsZSI6IkJSQUlOIE5FQ1RBUiJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvOTA3MTEyODI0ODYzOSIsInNob3J0SWQiOiI5MDcxMTI4MjQ4NjM5IiwidmFyaWFudHMiOlsiNDc0Mzk4NTExNTk4NzEiXSwiaGFuZGxlIjoiYWNoZS1yZWxpZWYtc2FsdmUiLCJ0aXRsZSI6IkFjaGUgUmVsaWVmIiwiaW1hZ2UiOiJodHRwczovL2Nkbi5zaG9waWZ5LmNvbS9zL2ZpbGVzLzEvMjk5NS8zMjM0L2ZpbGVzL2FjaGUtcmVsaWVmLWZyb250LXJlbmRlci5qcGc/dj0xNzA4NDg2NzY4In1dfX0seyJpZCI6IjQ1OTM3IiwidiI6MiwidHJpZ2dlciI6eyJvbiI6InNwZWNpZmljIiwic2VsZWN0aW9uIjp7InR5cGUiOiJQcm9kdWN0IiwicHJvZHVjdHMiOlt7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTI2ODk3MDciLCJzaG9ydElkIjoiMTQ2NTUxMjY4OTcwNyIsInZhcmlhbnRzIjpbIjEzNjIxNDEwODU3MDAzIl0sImhhbmRsZSI6ImVsZXZhdGUiLCJ0aXRsZSI6IkVMRVZBVEUiLCJpbWFnZSI6Imh0dHBzOi8vY2RuLnNob3BpZnkuY29tL3MvZmlsZXMvMS8yOTk1LzMyMzQvZmlsZXMvZWxldmF0ZV82YTA0ZTY4ZC05YTQxLTQ3NmYtYWQwMy1kYmY5ZTQ2YzM3ZjYuanBnP3Y9MTcwNzIwMzM3OSJ9XX19LCJ1cHNlbGwiOnsidHlwZSI6IlByb2R1Y3QiLCJwcm9kdWN0cyI6W3siaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvODk5OTM2MzI0ODQ0NyIsInNob3J0SWQiOiI4OTk5MzYzMjQ4NDQ3IiwidmFyaWFudHMiOlsiNDcyMjk2NTQzMDMwMzkiXSwiaGFuZGxlIjoic2hpbGFqaXQiLCJ0aXRsZSI6IlNoaWxhaml0IFJlc2luIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC82NzQ0ODc0Nzc4Njk3Iiwic2hvcnRJZCI6IjY3NDQ4NzQ3Nzg2OTciLCJ2YXJpYW50cyI6WyIzOTkwMzA1OTUwOTMyMSJdLCJoYW5kbGUiOiJicmFpbi1uZWN0YXIiLCJ0aXRsZSI6IkJSQUlOIE5FQ1RBUiJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxNTUwNzc1NSIsInNob3J0SWQiOiIxNDY1NTE1NTA3NzU1IiwidmFyaWFudHMiOlsiMTM2MjE0MzA2MTYxMDciXSwiaGFuZGxlIjoiaW1tdW5hIiwidGl0bGUiOiJJTU1VTkEifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTQ0MjY0MTEiLCJzaG9ydElkIjoiMTQ2NTUxNDQyNjQxMSIsInZhcmlhbnRzIjpbIjQ1MjgyMzQ5ODc1NTE5Il0sImhhbmRsZSI6Imp1aWN5LWpvaW50IiwidGl0bGUiOiJKVUlDWSBKT0lOVCJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvOTA3MTEyODI0ODYzOSIsInNob3J0SWQiOiI5MDcxMTI4MjQ4NjM5IiwidmFyaWFudHMiOlsiNDc0Mzk4NTExNTk4NzEiXSwiaGFuZGxlIjoiYWNoZS1yZWxpZWYtc2FsdmUiLCJ0aXRsZSI6IkFjaGUgUmVsaWVmIiwiaW1hZ2UiOiJodHRwczovL2Nkbi5zaG9waWZ5LmNvbS9zL2ZpbGVzLzEvMjk5NS8zMjM0L2ZpbGVzL2FjaGUtcmVsaWVmLWZyb250LXJlbmRlci5qcGc/dj0xNzA4NDg2NzY4In1dfX0seyJpZCI6IjEwODM3IiwidiI6MiwidHJpZ2dlciI6eyJvbiI6InNwZWNpZmljIiwic2VsZWN0aW9uIjp7InR5cGUiOiJQcm9kdWN0IiwicHJvZHVjdHMiOlt7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTQ0MjY0MTEiLCJzaG9ydElkIjoiMTQ2NTUxNDQyNjQxMSIsInZhcmlhbnRzIjpbIjQ1MjgyMzQ5ODc1NTE5Il0sImhhbmRsZSI6Imp1aWN5LWpvaW50IiwidGl0bGUiOiJKVUlDWSBKT0lOVCIsImltYWdlIjoiaHR0cHM6Ly9jZG4uc2hvcGlmeS5jb20vcy9maWxlcy8xLzI5OTUvMzIzNC9maWxlcy9qdWljeV9jZGFhODkyOC0xNDlmLTQ1M2EtYjkyZS04ZGQ2NWQxNjBjOGEuanBnP3Y9MTcwNzIwMzU1NSJ9XX19LCJ1cHNlbGwiOnsidHlwZSI6IlByb2R1Y3QiLCJwcm9kdWN0cyI6W3siaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvOTA3MTEyODI0ODYzOSIsInNob3J0SWQiOiI5MDcxMTI4MjQ4NjM5IiwidmFyaWFudHMiOlsiNDc0Mzk4NTExNTk4NzEiXSwiaGFuZGxlIjoiYWNoZS1yZWxpZWYtc2FsdmUiLCJ0aXRsZSI6IkFjaGUgUmVsaWVmIn0seyJpZCI6ImdpZDovL3Nob3BpZnkvUHJvZHVjdC84OTk5MzYzMjQ4NDQ3Iiwic2hvcnRJZCI6Ijg5OTkzNjMyNDg0NDciLCJ2YXJpYW50cyI6WyI0NzIyOTY1NDMwMzAzOSJdLCJoYW5kbGUiOiJzaGlsYWppdCIsInRpdGxlIjoiU2hpbGFqaXQgUmVzaW4ifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzY3NDQ4NzQ3Nzg2OTciLCJzaG9ydElkIjoiNjc0NDg3NDc3ODY5NyIsInZhcmlhbnRzIjpbIjM5OTAzMDU5NTA5MzIxIl0sImhhbmRsZSI6ImJyYWluLW5lY3RhciIsInRpdGxlIjoiQlJBSU4gTkVDVEFSIiwiaW1hZ2UiOiJodHRwczovL2Nkbi5zaG9waWZ5LmNvbS9zL2ZpbGVzLzEvMjk5NS8zMjM0L2ZpbGVzL2JyYWluLmpwZz92PTE3MDcyMDMyMjIifSx7ImlkIjoiZ2lkOi8vc2hvcGlmeS9Qcm9kdWN0LzE0NjU1MTI2ODk3MDciLCJzaG9ydElkIjoiMTQ2NTUxMjY4OTcwNyIsInZhcmlhbnRzIjpbIjEzNjIxNDEwODU3MDAzIl0sImhhbmRsZSI6ImVsZXZhdGUiLCJ0aXRsZSI6IkVMRVZBVEUiLCJpbWFnZSI6Imh0dHBzOi8vY2RuLnNob3BpZnkuY29tL3MvZmlsZXMvMS8yOTk1LzMyMzQvZmlsZXMvZWxldmF0ZV82YTA0ZTY4ZC05YTQxLTQ3NmYtYWQwMy1kYmY5ZTQ2YzM3ZjYuanBnP3Y9MTcwNzIwMzM3OSJ9LHsiaWQiOiJnaWQ6Ly9zaG9waWZ5L1Byb2R1Y3QvMTQ2NTUxNTUwNzc1NSIsInNob3J0SWQiOiIxNDY1NTE1NTA3NzU1IiwidmFyaWFudHMiOlsiMTM2MjE0MzA2MTYxMDciXSwiaGFuZGxlIjoiaW1tdW5hIiwidGl0bGUiOiJJTU1VTkEiLCJpbWFnZSI6Imh0dHBzOi8vY2RuLnNob3BpZnkuY29tL3MvZmlsZXMvMS8yOTk1LzMyMzQvZmlsZXMvaW1tdW5hXzQ5NDZjNzVlLWIxMWUtNDM5Ny05MDUyLTI2OTliNTQ2Mjg0NS5qcGc/dj0xNzA3MjAzNTM1In1dfX1d");
+    if (window.upcartSettings.upcartEditorSettings.upsellsItems === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsItems = b64DecodeUnicode("W3siX2lkIjoiIiwidHJpZ2dlciI6bnVsbCwidXBzZWxsIjpudWxsfV0=");
+    }
+    window.upcartSettings.upcartEditorSettings.upsellsItems = JSON.parse(window.upcartSettings.upcartEditorSettings.upsellsItems);
+    window.upcartSettings.upcartEditorSettings.upsellsModulePosition = b64DecodeUnicode("Ym90dG9t");
+    if (window.upcartSettings.upcartEditorSettings.upsellsModulePosition === '') {
+        window.upcartSettings.upcartEditorSettings.upsellsModulePosition = b64DecodeUnicode("Ym90dG9t");
+    }
+    window.upcartSettings.upcartEditorSettings.recommendedUpsells = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.recommendedUpsells === '') {
+        window.upcartSettings.upcartEditorSettings.recommendedUpsells = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.recommendedUpsells = JSON.parse(window.upcartSettings.upcartEditorSettings.recommendedUpsells);
+    window.upcartSettings.upcartEditorSettings.upsellRecommendationIntent = b64DecodeUnicode("cmVsYXRlZA==");
+    if (window.upcartSettings.upcartEditorSettings.upsellRecommendationIntent === '') {
+        window.upcartSettings.upcartEditorSettings.upsellRecommendationIntent = b64DecodeUnicode("cmVsYXRlZA==");
+    }
+    window.upcartSettings.upcartEditorSettings.addonsModule = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.addonsModule === '') {
+        window.upcartSettings.upcartEditorSettings.addonsModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.addonsModule = JSON.parse(window.upcartSettings.upcartEditorSettings.addonsModule);
+    window.upcartSettings.upcartEditorSettings.addonsField = b64DecodeUnicode("eyJzaGlwcGluZ1Byb3RlY3Rpb24iOnsiYWN0aXZlIjp0cnVlLCJwcm9kdWN0SGFuZGxlIjoic2hpcHBpbmctcHJvdGVjdGlvbiIsImRlZmF1bHRCZWhhdmlvciI6ZmFsc2V9LCJwcm9kdWN0QWRkb24iOnsiYWN0aXZlIjpmYWxzZSwicHJvZHVjdEhhbmRsZSI6bnVsbCwicHJvZHVjdCI6bnVsbCwiZGVmYXVsdEJlaGF2aW9yIjpmYWxzZX19");
+    if (window.upcartSettings.upcartEditorSettings.addonsField === '') {
+        window.upcartSettings.upcartEditorSettings.addonsField = b64DecodeUnicode("eyJzaGlwcGluZ1Byb3RlY3Rpb24iOnsiYWN0aXZlIjpmYWxzZSwicHJvZHVjdEhhbmRsZSI6bnVsbCwiZGVmYXVsdEJlaGF2aW9yIjpmYWxzZSwidGllcnMiOltdfSwicHJvZHVjdEFkZG9uIjp7ImFjdGl2ZSI6ZmFsc2UsInByb2R1Y3RIYW5kbGUiOm51bGwsInByb2R1Y3QiOm51bGwsImRlZmF1bHRCZWhhdmlvciI6ZmFsc2V9fQ==");
+    }
+    window.upcartSettings.upcartEditorSettings.addonsField = JSON.parse(window.upcartSettings.upcartEditorSettings.addonsField);
+    window.upcartSettings.upcartEditorSettings.addonsShouldBeCounted = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.addonsShouldBeCounted === '') {
+        window.upcartSettings.upcartEditorSettings.addonsShouldBeCounted = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.addonsShouldBeCounted = JSON.parse(window.upcartSettings.upcartEditorSettings.addonsShouldBeCounted);
+    window.upcartSettings.upcartEditorSettings.notesModule = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.notesModule === '') {
+        window.upcartSettings.upcartEditorSettings.notesModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.notesModule = JSON.parse(window.upcartSettings.upcartEditorSettings.notesModule);
+    window.upcartSettings.upcartEditorSettings.notesTitle = b64DecodeUnicode("PHA+QWRkIHNwZWNpYWwgaW5zdHJ1Y3Rpb25zPC9wPg==");
+    if (window.upcartSettings.upcartEditorSettings.notesTitle === '') {
+        window.upcartSettings.upcartEditorSettings.notesTitle = b64DecodeUnicode("PHA+QWRkIHNwZWNpYWwgaW5zdHJ1Y3Rpb25zPC9wPg==");
+    }
+    window.upcartSettings.upcartEditorSettings.notesPlaceholder = b64DecodeUnicode("U3BlY2lhbCBpbnN0cnVjdGlvbnMgZm9yIHlvdXIgb3JkZXI=");
+    if (window.upcartSettings.upcartEditorSettings.notesPlaceholder === '') {
+        window.upcartSettings.upcartEditorSettings.notesPlaceholder = b64DecodeUnicode("U3BlY2lhbCBpbnN0cnVjdGlvbnMgZm9yIHlvdXIgb3JkZXI=");
+    }
+    window.upcartSettings.upcartEditorSettings.notesPlacement = b64DecodeUnicode("Ym90dG9tT2ZDYXJ0");
+    if (window.upcartSettings.upcartEditorSettings.notesPlacement === '') {
+        window.upcartSettings.upcartEditorSettings.notesPlacement = b64DecodeUnicode("Ym90dG9tT2ZDYXJ0");
+    }
+    window.upcartSettings.upcartEditorSettings.trustBadgesModule = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.trustBadgesModule === '') {
+        window.upcartSettings.upcartEditorSettings.trustBadgesModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.trustBadgesModule = JSON.parse(window.upcartSettings.upcartEditorSettings.trustBadgesModule);
+    window.upcartSettings.upcartEditorSettings.trustBadges = b64DecodeUnicode("eyJ1cmwiOiJodHRwczovL3N0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vdXBjYXJ0LXB1YmxpYy9wYXltZW50LWljb25zLnBuZyIsInBvc2l0aW9uIjoiYm90dG9tIn0=");
+    if (window.upcartSettings.upcartEditorSettings.trustBadges === '') {
+        window.upcartSettings.upcartEditorSettings.trustBadges = b64DecodeUnicode("eyJ1cmwiOiIiLCJwb3NpdGlvbiI6ImJvdHRvbSJ9");
+    }
+    window.upcartSettings.upcartEditorSettings.trustBadges = JSON.parse(window.upcartSettings.upcartEditorSettings.trustBadges);
+    window.upcartSettings.upcartEditorSettings.discountCodeModule = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartEditorSettings.discountCodeModule === '') {
+        window.upcartSettings.upcartEditorSettings.discountCodeModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.discountCodeModule = JSON.parse(window.upcartSettings.upcartEditorSettings.discountCodeModule);
+    window.upcartSettings.upcartEditorSettings.discountCodePlaceholder = b64DecodeUnicode("RGlzY291bnQgY29kZQ==");
+    if (window.upcartSettings.upcartEditorSettings.discountCodePlaceholder === '') {
+        window.upcartSettings.upcartEditorSettings.discountCodePlaceholder = b64DecodeUnicode("RGlzY291bnQgY29kZQ==");
+    }
+    window.upcartSettings.upcartEditorSettings.discountCodeButtonText = b64DecodeUnicode("QXBwbHk=");
+    if (window.upcartSettings.upcartEditorSettings.discountCodeButtonText === '') {
+        window.upcartSettings.upcartEditorSettings.discountCodeButtonText = b64DecodeUnicode("QXBwbHk=");
+    }
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesModule = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.subscriptionUpgradesModule === '') {
+        window.upcartSettings.upcartEditorSettings.subscriptionUpgradesModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesModule = JSON.parse(window.upcartSettings.upcartEditorSettings.subscriptionUpgradesModule);
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesPreventDowngrades = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.upcartEditorSettings.subscriptionUpgradesPreventDowngrades === '') {
+        window.upcartSettings.upcartEditorSettings.subscriptionUpgradesPreventDowngrades = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesPreventDowngrades = JSON.parse(window.upcartSettings.upcartEditorSettings.subscriptionUpgradesPreventDowngrades);
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesButtonText = b64DecodeUnicode("VXBncmFkZSB0byB7e3NlbGxpbmdfcGxhbl9ncm91cF9uYW1lfX0=");
+    if (window.upcartSettings.upcartEditorSettings.subscriptionUpgradesButtonText === '') {
+        window.upcartSettings.upcartEditorSettings.subscriptionUpgradesButtonText = b64DecodeUnicode("VXBncmFkZSB0byB7e3NlbGxpbmdfcGxhbl9ncm91cF9uYW1lfX0=");
+    }
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsTextOverride = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsTextOverride === '') {
+        window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsTextOverride = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsTextOverride = JSON.parse(window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsTextOverride);
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsText = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsText === '') {
+        window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOptionsText = b64DecodeUnicode("e3tzZWxsaW5nX3BsYW5fZ3JvdXBfbmFtZX19IC8ge3tzZWxsaW5nX3BsYW5fbmFtZX19");
+    }
+    window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOneTimePurchaseText = b64DecodeUnicode("");
+    if (window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOneTimePurchaseText === '') {
+        window.upcartSettings.upcartEditorSettings.subscriptionUpgradesOneTimePurchaseText = b64DecodeUnicode("T25lLXRpbWUgcHVyY2hhc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.expressPayModule = b64DecodeUnicode("dHJ1ZQ==");
+    if (window.upcartSettings.upcartEditorSettings.expressPayModule === '') {
+        window.upcartSettings.upcartEditorSettings.expressPayModule = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.upcartEditorSettings.expressPayModule = JSON.parse(window.upcartSettings.upcartEditorSettings.expressPayModule);
+    window.upcartSettings.upcartEditorSettings.expressPayEnabledGateways = b64DecodeUnicode("WyJhcHBsZVBheSIsInBheXBhbCIsInNob3BQYXkiXQ==");
+    if (window.upcartSettings.upcartEditorSettings.expressPayEnabledGateways === '') {
+        window.upcartSettings.upcartEditorSettings.expressPayEnabledGateways = b64DecodeUnicode("W10=");
+    }
+    window.upcartSettings.upcartEditorSettings.expressPayEnabledGateways = JSON.parse(window.upcartSettings.upcartEditorSettings.expressPayEnabledGateways);
+    window.upcartSettings.stickyCartButtonEditorSettings.stickyCartButtonIsEnabled = b64DecodeUnicode("ZmFsc2U=");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.stickyCartButtonIsEnabled === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.stickyCartButtonIsEnabled = b64DecodeUnicode("ZmFsc2U=");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.stickyCartButtonIsEnabled = JSON.parse(window.upcartSettings.stickyCartButtonEditorSettings.stickyCartButtonIsEnabled);
+    window.upcartSettings.stickyCartButtonEditorSettings.backgroundColor = b64DecodeUnicode("IzAwMDAwMA==");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.backgroundColor === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.backgroundColor = b64DecodeUnicode("IzAwMDAwMA==");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.deviceSettings = b64DecodeUnicode("YWxsRGV2aWNlcw==");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.deviceSettings === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.deviceSettings = b64DecodeUnicode("YWxsRGV2aWNlcw==");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.iconColor = b64DecodeUnicode("I2ZmZmZmZg==");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.iconColor === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.iconColor = b64DecodeUnicode("I2ZmZmZmZg==");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.iconStyle = b64DecodeUnicode("c3F1YXJlQmFn");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.iconStyle === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.iconStyle = b64DecodeUnicode("c3F1YXJlQmFn");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.quantityBackgroundColor = b64DecodeUnicode("I2U0MjYyNg==");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.quantityBackgroundColor === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.quantityBackgroundColor = b64DecodeUnicode("I2U0MjYyNg==");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.quantityTextColor = b64DecodeUnicode("I2ZmZmZmZg==");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.quantityTextColor === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.quantityTextColor = b64DecodeUnicode("I2ZmZmZmZg==");
+    }
+    window.upcartSettings.stickyCartButtonEditorSettings.stickyCartPosition = b64DecodeUnicode("Ym90dG9tUmlnaHQ=");
+    if (window.upcartSettings.stickyCartButtonEditorSettings.stickyCartPosition === '') {
+        window.upcartSettings.stickyCartButtonEditorSettings.stickyCartPosition = b64DecodeUnicode("Ym90dG9tUmlnaHQ=");
+    }
+</script>
+  
+  <div id="upcart-additional-checkout-buttons" style="position: absolute !important; margin-left: -9999px !important; display: block !important;" class="additional-checkout-buttons">
+     
+    <div class="dynamic-checkout__content" id="dynamic-checkout-cart" data-shopify="dynamic-checkout-cart"></div>
+    <div class="upcart-additional-checkout-buttons-svgs">
+
+      
+        <!-- BEGIN app snippet: ShopPayLogo --><svg
+  class='upcart-express-pay-button-shop-pay-svg'
+  viewBox='0 0 4317 1037'
+  fill='none'
+  xmlns='http://www.w3.org/2000/svg'
+  style='width: 69px; height: 20px;'
+>
+  <g clipPath="url(#clip0)">
+    <path
+      d="M1105.96 326.186C1071.34 253.553 1005.7 206.635 906.786 206.635C876.426 207.164 846.593 214.661 819.588 228.543C792.585 242.427 769.128 262.328 751.033 286.711L747.423 291.109V6.44337C747.423 4.7982 746.77 3.22051 745.606 2.05722C744.443 0.8939 742.864 0.240234 741.219 0.240234H601.367C599.742 0.269795 598.194 0.936325 597.055 2.09644C595.915 3.25656 595.277 4.81756 595.277 6.44337V822.999C595.277 824.614 595.92 826.162 597.062 827.304C598.204 828.447 599.752 829.089 601.367 829.089H751.145C752.771 829.089 754.332 828.452 755.492 827.311C756.652 826.172 757.318 824.624 757.348 822.999V474.835C757.348 407.165 802.461 359.231 874.643 359.231C953.592 359.231 973.555 424.195 973.555 490.398V822.999C973.555 824.614 974.196 826.162 975.338 827.304C976.48 828.447 978.03 829.089 979.645 829.089H1129.08C1130.71 829.089 1132.27 828.452 1133.43 827.311C1134.59 826.172 1135.26 824.624 1135.29 822.999V470.549C1135.29 458.481 1135.29 446.638 1133.71 435.135C1131.14 397.437 1121.74 360.519 1105.96 326.186Z"
+      fill="white"
+    />
+    <path
+      d="M358.093 447.206C358.093 447.206 281.851 429.273 253.768 422.055C225.684 414.837 176.623 399.498 176.623 362.392C176.623 325.286 216.21 313.443 256.362 313.443C296.513 313.443 341.176 323.143 344.672 367.693C344.813 369.299 345.552 370.791 346.742 371.879C347.933 372.965 349.488 373.563 351.1 373.558L498.734 372.994C499.603 372.996 500.463 372.819 501.26 372.474C502.057 372.129 502.774 371.623 503.367 370.987C503.96 370.353 504.416 369.602 504.705 368.783C504.994 367.963 505.113 367.093 505.05 366.226C495.915 223.668 370.837 172.69 255.459 172.69C118.652 172.69 18.6132 262.917 18.6132 362.392C18.6132 435.025 39.1399 503.147 200.533 550.516C228.842 558.749 267.302 569.463 300.912 578.825C341.288 590.104 363.055 607.134 363.055 633.976C363.055 665.104 317.942 686.758 273.618 686.758C209.444 686.758 163.879 662.961 160.157 620.215C159.963 618.652 159.202 617.212 158.016 616.172C156.831 615.132 155.305 614.564 153.728 614.576L6.43255 615.253C5.569 615.253 4.71432 615.426 3.91928 615.764C3.12425 616.101 2.40528 616.594 1.80527 617.216C1.20527 617.836 0.736446 618.572 0.426968 619.378C0.11749 620.185 -0.0263401 621.045 0.00395994 621.908C6.77099 756.459 136.698 828.978 257.829 828.978C438.283 828.978 519.825 727.474 519.825 632.397C520.051 587.734 509.787 486.003 358.093 447.206Z"
+      fill="white"
+    />
+    <path
+      d="M2257.37 206.409C2182.38 206.409 2119.55 247.913 2079.06 297.991V212.274C2079.06 210.678 2078.43 209.145 2077.31 208.007C2076.21 206.868 2074.68 206.213 2073.08 206.185H1933.01C1931.4 206.185 1929.84 206.825 1928.7 207.967C1927.56 209.11 1926.91 210.66 1926.91 212.274V1013.04C1926.95 1014.63 1927.61 1016.16 1928.75 1017.27C1929.89 1018.39 1931.42 1019.02 1933.01 1019.02H2082.9C2084.48 1019.02 2086 1018.39 2087.12 1017.27C2088.24 1016.15 2088.87 1014.62 2088.87 1013.04V749.802H2091.13C2114.92 786.117 2180 829.653 2265.05 829.653C2424.96 829.653 2558.28 697.019 2558.28 517.806C2558.4 345.811 2425.76 206.409 2257.37 206.409ZM2243.5 677.057C2211.94 677.841 2180.83 669.2 2154.2 652.238C2127.57 635.274 2106.58 610.759 2093.93 581.82C2081.29 552.88 2077.55 520.829 2083.21 489.757C2088.85 458.685 2103.64 430.002 2125.66 407.369C2147.69 384.733 2175.96 369.175 2206.87 362.679C2237.77 356.183 2269.91 359.042 2299.18 370.893C2328.46 382.743 2353.53 403.048 2371.22 429.215C2388.9 455.383 2398.38 486.224 2398.47 517.806C2398.79 538.449 2395.03 558.955 2387.42 578.145C2379.81 597.335 2368.47 614.831 2354.07 629.628C2339.68 644.425 2322.5 656.232 2303.51 664.371C2284.54 672.511 2264.15 676.821 2243.5 677.057Z"
+      fill="white"
+    />
+    <path
+      d="M1483.34 171.229C1343.6 171.229 1273.9 218.711 1217.95 256.72L1216.26 257.847C1213.38 259.821 1211.35 262.813 1210.57 266.221C1209.8 269.63 1210.34 273.204 1212.09 276.231L1267.35 371.419C1268.39 373.201 1269.81 374.732 1271.5 375.901C1273.2 377.071 1275.13 377.852 1277.17 378.187C1279.16 378.546 1281.2 378.459 1283.15 377.932C1285.1 377.405 1286.91 376.454 1288.45 375.141L1292.84 371.533C1321.6 347.397 1367.73 315.14 1479.39 306.343C1541.53 301.382 1595.22 317.622 1634.8 354.615C1678.34 394.767 1704.4 459.617 1704.4 528.077C1704.4 654.057 1630.18 733.23 1510.97 734.81C1412.73 734.246 1346.75 683.042 1346.75 607.364C1346.75 567.212 1364.91 541.047 1400.33 514.881C1403.03 512.947 1404.94 510.1 1405.71 506.866C1406.48 503.632 1406.05 500.229 1404.5 497.287L1354.87 403.45C1353.96 401.771 1352.72 400.289 1351.23 399.089C1349.74 397.889 1348.03 396.995 1346.19 396.458C1344.31 395.899 1342.34 395.741 1340.4 395.992C1338.45 396.245 1336.58 396.903 1334.91 397.925C1279.2 430.97 1210.85 491.422 1214.57 607.59C1219.08 755.449 1342.02 868.345 1501.83 872.97H1509.84H1520.78C1710.7 866.766 1847.85 725.787 1847.85 534.619C1847.85 359.126 1719.95 171.229 1483.34 171.229Z"
+      fill="white"
+    />
+    <path
+      d="M3148.93 261.455H3053.73C3051.51 261.484 3049.37 262.385 3047.79 263.964C3046.2 265.544 3045.3 267.679 3045.29 269.914V469.653C3045.3 471.878 3046.21 473.999 3047.8 475.561C3049.38 477.123 3051.51 478 3053.73 478H3148.93C3206.9 478 3249.65 432.322 3249.65 369.727C3249.65 307.132 3206.9 261.455 3148.93 261.455Z"
+      fill="white"
+    />
+    <path
+      d="M3441.38 614.802C3441.38 643.787 3465.85 659.915 3508.48 659.915C3566.45 659.915 3600.73 628.561 3600.73 572.958V556.944L3513.9 561.455C3468.1 563.71 3441.38 582.772 3441.38 614.802Z"
+      fill="white"
+    />
+    <path
+      d="M4146.27 2.04983H2867.3C2846.33 2.04981 2825.54 6.18442 2806.17 14.2172C2786.78 22.25 2769.17 34.0237 2754.35 48.8653C2739.51 63.707 2727.75 81.3258 2719.73 100.715C2711.7 120.104 2707.59 140.883 2707.61 161.865V862.026C2707.61 904.392 2724.43 945.025 2754.38 974.992C2784.33 1004.96 2824.95 1021.81 2867.3 1021.84H4146.27C4167.28 1021.9 4188.1 1017.82 4207.53 1009.83C4226.95 1001.84 4244.61 990.093 4259.5 975.273C4274.37 960.45 4286.2 942.839 4294.28 923.445C4302.35 904.052 4306.51 883.258 4306.55 862.252V162.09C4306.58 141.042 4302.47 120.192 4294.43 100.74C4286.39 81.2884 4274.58 63.6179 4259.69 48.7448C4244.8 33.8719 4227.11 22.0899 4207.65 14.0763C4188.19 6.06265 4167.33 1.97545 4146.27 2.04983ZM3153.77 556.609H3053.17C3050.93 556.609 3048.79 557.499 3047.19 559.085C3045.61 560.672 3044.71 562.824 3044.71 565.068V708.302C3044.71 710.545 3043.82 712.697 3042.24 714.283C3040.65 715.87 3038.5 716.761 3036.26 716.761H2965.42C2963.2 716.732 2961.05 715.831 2959.47 714.25C2957.89 712.672 2957.01 710.537 2956.97 708.302V191.639C2956.97 189.397 2957.86 187.245 2959.46 185.658C2961.04 184.072 2963.18 183.181 2965.42 183.181H3153.77C3260.47 183.181 3336.82 260.889 3336.82 369.951C3336.82 479.013 3261.03 556.833 3154.35 556.833L3153.77 556.609ZM3683.86 708.19C3683.88 709.31 3683.68 710.421 3683.25 711.461C3682.83 712.5 3682.21 713.447 3681.43 714.244C3680.63 715.041 3679.7 715.675 3678.66 716.107C3677.64 716.538 3676.52 716.761 3675.4 716.761H3608.52C3607.4 716.761 3606.29 716.538 3605.26 716.107C3604.22 715.675 3603.28 715.041 3602.5 714.244C3601.72 713.447 3601.09 712.5 3600.68 711.461C3600.26 710.421 3600.05 709.31 3600.07 708.19V692.739C3600.17 691.382 3599.85 690.026 3599.12 688.874C3598.41 687.72 3597.34 686.829 3596.06 686.334C3594.8 685.84 3593.41 685.769 3592.1 686.131C3590.77 686.491 3589.62 687.266 3588.79 688.34C3568.82 710.107 3536.34 725.896 3484.57 725.896C3408.34 725.896 3357.91 686.197 3357.91 617.624C3357.18 600.904 3360.63 584.265 3367.96 569.216C3375.28 554.17 3386.26 541.19 3399.88 531.458C3427.39 510.818 3470.02 500.104 3533.29 497.622L3600.39 495.367V475.741C3600.39 436.154 3573.78 419.35 3531.03 419.35C3488.29 419.35 3461.33 434.463 3455.03 459.163C3454.52 460.907 3453.45 462.433 3451.97 463.496C3450.51 464.56 3448.72 465.098 3446.9 465.027H3380.7C3379.48 465.058 3378.27 464.82 3377.15 464.334C3376.05 463.846 3375.04 463.12 3374.23 462.206C3373.43 461.291 3372.83 460.214 3372.49 459.044C3372.14 457.875 3372.05 456.646 3372.24 455.441C3382.17 396.793 3430.66 352.243 3534.09 352.243C3643.94 352.243 3683.52 403.335 3683.52 500.892L3683.86 708.19ZM4100.49 372.995L3951.62 770.108C3917.78 862.364 3858.56 886.05 3793.71 886.05C3781.5 886.348 3769.3 884.866 3757.51 881.652C3755.67 881.157 3754.06 880.073 3752.88 878.563C3751.73 877.056 3751.1 875.208 3751.08 873.305V812.965C3751.08 811.703 3751.35 810.455 3751.88 809.311C3752.42 808.167 3753.19 807.154 3754.16 806.347C3755.14 805.538 3756.27 804.955 3757.49 804.637C3758.71 804.319 3759.99 804.274 3761.23 804.506C3771.46 806.446 3781.84 807.428 3792.25 807.44C3810.18 808.339 3827.9 803.193 3842.57 792.825C3857.22 782.457 3867.98 767.467 3873.11 750.258L3877.52 736.385C3878.2 734.529 3878.2 732.491 3877.52 730.633L3738.33 373.109C3737.91 371.831 3737.79 370.469 3737.99 369.137C3738.2 367.804 3738.71 366.537 3739.47 365.439C3740.26 364.341 3741.29 363.442 3742.48 362.814C3743.67 362.187 3745 361.849 3746.34 361.83H3814.02C3815.75 361.847 3817.43 362.381 3818.86 363.367C3820.29 364.351 3821.39 365.741 3822.02 367.357L3916.54 619.542C3917.17 621.189 3918.27 622.608 3919.72 623.609C3921.18 624.612 3922.89 625.147 3924.66 625.147C3926.41 625.147 3928.15 624.612 3929.59 623.609C3931.04 622.608 3932.16 621.189 3932.77 619.542L4014.78 368.034C4015.32 366.319 4016.41 364.825 4017.87 363.77C4019.33 362.714 4021.08 362.153 4022.88 362.169H4092.26C4093.59 362.163 4094.91 362.475 4096.12 363.073C4097.31 363.673 4098.36 364.545 4099.16 365.62C4099.96 366.695 4100.49 367.942 4100.72 369.263C4100.96 370.582 4100.88 371.938 4100.49 373.221V372.995Z"
+      fill="white"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0">
+      <rect width="4317" height="1036.76" fill="white" transform="translate(0 0.240234)" />
+    </clipPath>
+  </defs>
+</svg>
+<!-- END app snippet -->
+    
+        <!-- BEGIN app snippet: PayPalLogo --><svg
+  class='upcart-express-pay-button-paypal-svg'
+  x='0px'
+  y='0px'
+  viewBox='0 0 124 33'
+  style='width: 82px; height: 20px'
+>
+  <title>logo-paypal</title>
+  <keywords>paypal</keywords>
+
+  <path
+    fill="#253B80"
+    d="M46.211,6.749h-6.839c-0.468,0-0.866,0.34-0.939,0.802l-2.766,17.537c-0.055,0.346,0.213,0.658,0.564,0.658
+      h3.265c0.468,0,0.866-0.34,0.939-0.803l0.746-4.73c0.072-0.463,0.471-0.803,0.938-0.803h2.165c4.505,0,7.105-2.18,7.784-6.5
+      c0.306-1.89,0.013-3.375-0.872-4.415C50.224,7.353,48.5,6.749,46.211,6.749z M47,13.154c-0.374,2.454-2.249,2.454-4.062,2.454
+      h-1.032l0.724-4.583c0.043-0.277,0.283-0.481,0.563-0.481h0.473c1.235,0,2.4,0,3.002,0.704C47.027,11.668,47.137,12.292,47,13.154z"
+  ></path>
+  <path
+    fill="#253B80"
+    d="M66.654,13.075h-3.275c-0.279,0-0.52,0.204-0.563,0.481l-0.145,0.916l-0.229-0.332
+      c-0.709-1.029-2.29-1.373-3.868-1.373c-3.619,0-6.71,2.741-7.312,6.586c-0.313,1.918,0.132,3.752,1.22,5.031
+      c0.998,1.176,2.426,1.666,4.125,1.666c2.916,0,4.533-1.875,4.533-1.875l-0.146,0.91c-0.055,0.348,0.213,0.66,0.562,0.66h2.95
+      c0.469,0,0.865-0.34,0.939-0.803l1.77-11.209C67.271,13.388,67.004,13.075,66.654,13.075z M62.089,19.449
+      c-0.316,1.871-1.801,3.127-3.695,3.127c-0.951,0-1.711-0.305-2.199-0.883c-0.484-0.574-0.668-1.391-0.514-2.301
+      c0.295-1.855,1.805-3.152,3.67-3.152c0.93,0,1.686,0.309,2.184,0.892C62.034,17.721,62.232,18.543,62.089,19.449z"
+  ></path>
+  <path
+    fill="#253B80"
+    d="M84.096,13.075h-3.291c-0.314,0-0.609,0.156-0.787,0.417l-4.539,6.686l-1.924-6.425
+      c-0.121-0.402-0.492-0.678-0.912-0.678h-3.234c-0.393,0-0.666,0.384-0.541,0.754l3.625,10.638l-3.408,4.811
+      c-0.268,0.379,0.002,0.9,0.465,0.9h3.287c0.312,0,0.604-0.152,0.781-0.408L84.564,13.97C84.826,13.592,84.557,13.075,84.096,13.075z
+      "
+  ></path>
+  <path
+    fill="#179BD7"
+    d="M94.992,6.749h-6.84c-0.467,0-0.865,0.34-0.938,0.802l-2.766,17.537c-0.055,0.346,0.213,0.658,0.562,0.658
+      h3.51c0.326,0,0.605-0.238,0.656-0.562l0.785-4.971c0.072-0.463,0.471-0.803,0.938-0.803h2.164c4.506,0,7.105-2.18,7.785-6.5
+      c0.307-1.89,0.012-3.375-0.873-4.415C99.004,7.353,97.281,6.749,94.992,6.749z M95.781,13.154c-0.373,2.454-2.248,2.454-4.062,2.454
+      h-1.031l0.725-4.583c0.043-0.277,0.281-0.481,0.562-0.481h0.473c1.234,0,2.4,0,3.002,0.704
+      C95.809,11.668,95.918,12.292,95.781,13.154z"
+  ></path>
+  <path
+    fill="#179BD7"
+    d="M115.434,13.075h-3.273c-0.281,0-0.52,0.204-0.562,0.481l-0.145,0.916l-0.23-0.332
+      c-0.709-1.029-2.289-1.373-3.867-1.373c-3.619,0-6.709,2.741-7.311,6.586c-0.312,1.918,0.131,3.752,1.219,5.031
+      c1,1.176,2.426,1.666,4.125,1.666c2.916,0,4.533-1.875,4.533-1.875l-0.146,0.91c-0.055,0.348,0.213,0.66,0.564,0.66h2.949
+      c0.467,0,0.865-0.34,0.938-0.803l1.771-11.209C116.053,13.388,115.785,13.075,115.434,13.075z M110.869,19.449
+      c-0.314,1.871-1.801,3.127-3.695,3.127c-0.949,0-1.711-0.305-2.199-0.883c-0.484-0.574-0.666-1.391-0.514-2.301
+      c0.297-1.855,1.805-3.152,3.67-3.152c0.93,0,1.686,0.309,2.184,0.892C110.816,17.721,111.014,18.543,110.869,19.449z"
+  ></path>
+  <path
+    fill="#179BD7"
+    d="M119.295,7.23l-2.807,17.858c-0.055,0.346,0.213,0.658,0.562,0.658h2.822c0.469,0,0.867-0.34,0.939-0.803
+      l2.768-17.536c0.055-0.346-0.213-0.659-0.562-0.659h-3.16C119.578,6.749,119.338,6.953,119.295,7.23z"
+  ></path>
+  <path
+    fill="#253B80"
+    d="M7.266,29.154l0.523-3.322l-1.165-0.027H1.061L4.927,1.292C4.939,1.218,4.978,1.149,5.035,1.1
+      c0.057-0.049,0.13-0.076,0.206-0.076h9.38c3.114,0,5.263,0.648,6.385,1.927c0.526,0.6,0.861,1.227,1.023,1.917
+      c0.17,0.724,0.173,1.589,0.007,2.644l-0.012,0.077v0.676l0.526,0.298c0.443,0.235,0.795,0.504,1.065,0.812
+      c0.45,0.513,0.741,1.165,0.864,1.938c0.127,0.795,0.085,1.741-0.123,2.812c-0.24,1.232-0.628,2.305-1.152,3.183
+      c-0.482,0.809-1.096,1.48-1.825,2c-0.696,0.494-1.523,0.869-2.458,1.109c-0.906,0.236-1.939,0.355-3.072,0.355h-0.73
+      c-0.522,0-1.029,0.188-1.427,0.525c-0.399,0.344-0.663,0.814-0.744,1.328l-0.055,0.299l-0.924,5.855l-0.042,0.215
+      c-0.011,0.068-0.03,0.102-0.058,0.125c-0.025,0.021-0.061,0.035-0.096,0.035H7.266z"
+  ></path>
+  <path
+    fill="#179BD7"
+    d="M23.048,7.667L23.048,7.667L23.048,7.667c-0.028,0.179-0.06,0.362-0.096,0.55
+      c-1.237,6.351-5.469,8.545-10.874,8.545H9.326c-0.661,0-1.218,0.48-1.321,1.132l0,0l0,0L6.596,26.83l-0.399,2.533
+      c-0.067,0.428,0.263,0.814,0.695,0.814h4.881c0.578,0,1.069-0.42,1.16-0.99l0.048-0.248l0.919-5.832l0.059-0.32
+      c0.09-0.572,0.582-0.992,1.16-0.992h0.73c4.729,0,8.431-1.92,9.513-7.476c0.452-2.321,0.218-4.259-0.978-5.622
+      C24.022,8.286,23.573,7.945,23.048,7.667z"
+  ></path>
+  <path
+    fill="#222D65"
+    d="M21.754,7.151c-0.189-0.055-0.384-0.105-0.584-0.15c-0.201-0.044-0.407-0.083-0.619-0.117
+      c-0.742-0.12-1.555-0.177-2.426-0.177h-7.352c-0.181,0-0.353,0.041-0.507,0.115C9.927,6.985,9.675,7.306,9.614,7.699L8.05,17.605
+      l-0.045,0.289c0.103-0.652,0.66-1.132,1.321-1.132h2.752c5.405,0,9.637-2.195,10.874-8.545c0.037-0.188,0.068-0.371,0.096-0.55
+      c-0.313-0.166-0.652-0.308-1.017-0.429C21.941,7.208,21.848,7.179,21.754,7.151z"
+  ></path>
+  <path
+    fill="#253B80"
+    d="M9.614,7.699c0.061-0.393,0.313-0.714,0.652-0.876c0.155-0.074,0.326-0.115,0.507-0.115h7.352
+      c0.871,0,1.684,0.057,2.426,0.177c0.212,0.034,0.418,0.073,0.619,0.117c0.2,0.045,0.395,0.095,0.584,0.15
+      c0.094,0.028,0.187,0.057,0.278,0.086c0.365,0.121,0.704,0.264,1.017,0.429c0.368-2.347-0.003-3.945-1.272-5.392
+      C20.378,0.682,17.853,0,14.622,0h-9.38c-0.66,0-1.223,0.48-1.325,1.133L0.01,25.898c-0.077,0.49,0.301,0.932,0.795,0.932h5.791
+      l1.454-9.225L9.614,7.699z"
+  ></path>
+</svg>
+<!-- END app snippet -->
+
+        <!-- BEGIN app snippet: ApplePayLogo --><svg
+  class='upcart-express-pay-button-apple-pay-svg'
+  xmlns='http://www.w3.org/2000/svg'
+  viewBox='0 0 100 60'
+  style='
+    width: 60px;
+    height: 36px;
+  '
+>
+  <g fill="none" fillRule="evenodd">
+    <path
+      fill="#FFF"
+      d="M33.886 27.958c.037 3.825 3.5 5.097 3.538 5.113-.03.09-.553 1.814-1.824 3.595-1.099 1.54-2.24 3.073-4.035 3.105-1.765.032-2.332-1.003-4.35-1.003s-2.648.971-4.319 1.035c-1.733.063-3.054-1.666-4.161-3.2-2.264-3.137-3.994-8.866-1.67-12.732 1.153-1.92 3.215-3.137 5.453-3.168 1.702-.031 3.31 1.098 4.35 1.098 1.04 0 2.994-1.358 5.047-1.158.859.034 3.271.332 4.82 2.506-.125.075-2.88 1.612-2.849 4.81m-3.317-9.392c.92-1.069 1.54-2.556 1.371-4.035-1.327.05-2.931.847-3.882 1.915-.854.945-1.6 2.458-1.399 3.91 1.48.109 2.99-.721 3.91-1.79m13.323-1.83a41.71 41.71 0 0 1 2.257-.306 24.794 24.794 0 0 1 2.716-.136c1.411 0 2.628.164 3.65.494 1.023.33 1.863.801 2.521 1.415a5.812 5.812 0 0 1 1.323 1.943c.317.75.475 1.615.475 2.592 0 1.182-.217 2.217-.652 3.104a6.463 6.463 0 0 1-1.78 2.233c-.753.602-1.646 1.05-2.68 1.347-1.036.295-2.164.443-3.387.443-1.105 0-2.033-.08-2.785-.239v9.822h-1.658V16.738zm1.658 11.46c.4.112.846.192 1.34.237.494.045 1.022.068 1.586.068 2.116 0 3.756-.478 4.92-1.432 1.164-.955 1.746-2.353 1.746-4.194 0-.887-.153-1.66-.458-2.32a4.168 4.168 0 0 0-1.305-1.62c-.564-.42-1.234-.738-2.01-.955-.777-.216-1.635-.324-2.576-.324-.752 0-1.399.029-1.94.086-.54.057-.975.12-1.304.187v10.266zm24.47 7.365c0 .659.011 1.319.034 1.978.024.659.094 1.295.212 1.909h-1.552l-.246-2.319h-.072a5.809 5.809 0 0 1-.81.955 6.168 6.168 0 0 1-2.627 1.5 6.573 6.573 0 0 1-1.817.239c-.822 0-1.546-.132-2.17-.392-.623-.262-1.134-.603-1.534-1.023a4.14 4.14 0 0 1-.898-1.45 4.72 4.72 0 0 1-.3-1.636c0-1.933.84-3.421 2.521-4.468 1.682-1.046 4.215-1.545 7.602-1.5v-.444c0-.432-.042-.927-.124-1.484a4.553 4.553 0 0 0-.547-1.585c-.282-.5-.705-.92-1.27-1.26-.563-.342-1.328-.513-2.292-.513-.729 0-1.451.108-2.169.324a7.438 7.438 0 0 0-1.956.904l-.53-1.194a7.946 7.946 0 0 1 2.327-1.073 9.569 9.569 0 0 1 2.505-.324c1.175 0 2.134.193 2.874.58.74.386 1.323.886 1.746 1.5.423.613.712 1.3.864 2.063.152.762.23 1.518.23 2.267v6.446h-.001zm-1.658-4.877c-.894-.023-1.83.011-2.805.102-.975.09-1.875.29-2.697.597-.824.307-1.505.756-2.045 1.347-.541.592-.812 1.375-.812 2.353 0 1.159.341 2.012 1.023 2.557.682.546 1.445.82 2.292.82.682 0 1.293-.091 1.834-.274a4.708 4.708 0 0 0 2.415-1.773c.272-.387.477-.784.619-1.194.117-.455.177-.785.177-.99v-3.545zm4.9-7.605 4.301 10.64c.236.59.46 1.199.671 1.824.212.625.4 1.2.564 1.722h.071c.165-.5.352-1.063.564-1.688.212-.625.447-1.267.705-1.928l4.022-10.57h1.762l-4.9 12.004a136.65 136.65 0 0 1-1.394 3.46 32.347 32.347 0 0 1-1.323 2.797c-.447.83-.899 1.562-1.359 2.2a9.285 9.285 0 0 1-1.533 1.67c-.658.568-1.264.984-1.817 1.245a15.75 15.75 0 0 1-1.11.495l-.566-1.33c.424-.182.894-.42 1.411-.716a7.665 7.665 0 0 0 1.517-1.16c.424-.409.888-.948 1.393-1.62.506-.67.958-1.483 1.358-2.438.141-.364.212-.603.212-.716 0-.159-.07-.398-.212-.716l-6.102-15.176h1.765v.001z"
+    />
+  </g>
+</svg>
+<!-- END app snippet -->
+    </div>
+  </div>
+
+<script>
+  window.upcartPreloadedCart = {"note":null,"attributes":{},"original_total_price":423000,"total_price":423000,"total_discount":0,"total_weight":158.7573,"item_count":1,"items":[{"id":45282349875519,"properties":{},"quantity":1,"variant_id":45282349875519,"key":"45282349875519:785c41751bc9908e8848a536ed6cade2","title":"Juicy Joint Extract","price":423000,"original_price":423000,"discounted_price":423000,"line_price":423000,"original_line_price":423000,"total_discount":0,"discounts":[],"sku":"JJ33DR","grams":159,"vendor":"plantsbasically","taxable":true,"product_id":1465514426411,"product_has_only_default_variant":true,"gift_card":false,"final_price":423000,"final_line_price":423000,"url":"\/products\/juicy-joint?variant=45282349875519","featured_image":{"aspect_ratio":1.0,"alt":"Juicy Joint Extract","height":3000,"url":"\/\/www.plantsbasically.com\/cdn\/shop\/files\/juicy_a0e021ab-283b-4a0d-a740-c3181b3f4f19.jpg?v=1709182836","width":3000},"image":"\/\/www.plantsbasically.com\/cdn\/shop\/files\/juicy_a0e021ab-283b-4a0d-a740-c3181b3f4f19.jpg?v=1709182836","handle":"juicy-joint","requires_shipping":true,"product_type":"Elixir","product_title":"Juicy Joint Extract","product_description":"Inspired by the best of ancient tradition and modern science, Juicy Joint Extract is mindfully crafted with Meadowsweet Herb, Devil's Claw Root, White Willow Bark, Turmeric Root, Ginger Root, and Black Pepper to support an active lifestyle.*","variant_title":null,"variant_options":["Default Title"],"options_with_values":[{"name":"Title","value":"Default Title"}],"line_level_discount_allocations":[],"line_level_total_discount":0,"selling_plan_allocation":{"price_adjustments":[{"position":1,"price":423000}],"price":423000,"compare_at_price":470000,"per_delivery_price":423000,"selling_plan":{"id":7154630975,"name":"Delivery every 30 days","description":null,"options":[{"name":"Recharge Plan ID","position":1,"value":"1972981"},{"name":"Order Frequency and Unit","position":2,"value":"30-day"}],"recurring_deliveries":true,"price_adjustments":[{"order_count":null,"position":1,"value_type":"percentage","value":10}]},"checkout_charge_amount":423000,"remaining_balance_charge_amount":0}}],"requires_shipping":true,"currency":"INR","items_subtotal_price":423000,"cart_level_discount_applications":[],"checkout_charge_amount":423000};
+  window.upcartMoneyFormat = "Rs. {{amount}}";
+  window.upcartStorefrontPublicAccessToken = 'b79362349f3665d699c8022f2aee9831' || undefined;
+  window.upcartClientLocalizationCountry = {
+    isoCode: 'IN',
+    currency: 'CurrencyDrop',
+    name: 'India'
+  };
+</script>
+
+<script>
+  window.upcartPreloadedCart.items = window.upcartPreloadedCart.items.map((line) => {
+    
+      if (line.id === 45282349875519) {
+        line.compareAtPrice = '' || null;
+      }
+    
+
+    return line;
+  });
+</script>
+
+<script type="lazyload_js">
+  function UpCartPreviewModeCheckIfActive() {
+    const PREVIEW_MODE_SESSION_STORAGE_KEY = 'upcart-preview-mode';
+    const upcartPreviewQueryExists = new URLSearchParams(window.location.search).has('upcart-preview-mode');
+    const previewSessionStorageExists = sessionStorage.getItem(PREVIEW_MODE_SESSION_STORAGE_KEY) !== null;
+    return upcartPreviewQueryExists || previewSessionStorageExists;
+  }
+
+  function UpCartloadQRCodeScript(src, callback) {
+    const script = document.createElement('script');
+    script.src = src;
+    script.type = 'text/javascript';
+    script.defer = true;
+    script.onload = callback;
+    script.onerror = function() {
+      console.error('Failed to load script: ' + src);
+    };
+    document.head.appendChild(script);
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    if (UpCartPreviewModeCheckIfActive()) {
+      UpCartloadQRCodeScript("https://cdn.shopify.com/extensions/3630da51-f262-4256-bd02-72d84ec7a84b/upcart-cart-drawer-47/assets/qrcode.js", function() {
+          if (typeof QRCode !== 'undefined') {
+            window.UpcartQRCode = function(el, options) {
+              return new QRCode(el, options);
+          };
+        } else {
+          console.error('QRCode Object is not defined.');
+        }
+      });
+    }
+  });
+</script>
+
+<div id="upCart"></div>
+<div id="upCartStickyButton"></div>
+<style id="upCart-customCSS">
+  .a, textarea {
+   text-decoration-line: none; 
+   text-decoration: none;
+}
+</style>
+
+</div>
+{% endcomment %}

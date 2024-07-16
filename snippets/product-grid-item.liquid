@@ -89,7 +89,7 @@ Arguments
               {% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %} image-style--{{ image_style }}
             {%- endcapture -%}
             {%- if preview_image != blank -%}
-              {%- render 'image-element',
+              {%- render 'image-element-card',
                 img: preview_image,
                 classes: image_classes,
                 sizes: sizes,
@@ -112,7 +112,7 @@ Arguments
               {%- capture image_classes -%}
                 grid-product__image image-style--{{ image_style }}
               {%- endcapture -%}
-              {%- render 'image-element',
+              {%- render 'image-element-card',
                 img: preview_image,
                 classes: image_classes,
                 sizes: sizes,
@@ -135,7 +135,7 @@ Arguments
             {%- capture image_classes -%}
               image-style--{{ image_style }}
             {%- endcapture -%}
-            {%- render 'image-element',
+            {%- render 'image-element-card',
               img: second_image,
               classes: image_classes,
               sizes: sizes,

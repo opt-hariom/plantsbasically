@@ -147,9 +147,9 @@ a:hover::after {
   --colorTextBodyAlpha008:rgba(0, 0, 0, 0.08);
   --colorTextSavings:#C20000;
 
-  --urlIcoSelect:url(//www.plantsbasically.com/cdn/shop/t/27/assets/ico-select.svg);
-  --urlIcoSelectFooter:url(//www.plantsbasically.com/cdn/shop/t/27/assets/ico-select-footer.svg);
-  --urlIcoSelectWhite:url(//www.plantsbasically.com/cdn/shop/t/27/assets/ico-select-white.svg);
+  --urlIcoSelect:url(//www.plantsbasically.com/cdn/shop/t/32/assets/ico-select.svg);
+  --urlIcoSelectFooter:url(//www.plantsbasically.com/cdn/shop/t/32/assets/ico-select-footer.svg);
+  --urlIcoSelectWhite:url(//www.plantsbasically.com/cdn/shop/t/32/assets/ico-select-white.svg);
 
   --grid-gutter:17px;
   --drawer-gutter:20px;
